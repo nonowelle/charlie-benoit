@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Nav />
     <Header msg="Benoit et Charlie" />
     <Infos />
   </div>
@@ -8,12 +9,14 @@
 <script>
 import Header from "./components/Header.vue";
 import Infos from "./components/Infos.vue";
+import Nav from "./components/Nav.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Infos,
+    Nav,
   },
 };
 </script>
@@ -24,8 +27,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 
 body {

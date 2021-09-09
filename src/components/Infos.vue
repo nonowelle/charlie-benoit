@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h3>Horaire</h3>
+    <h3 id="horaire">Horaire</h3>
     <ul>
       <li>
         Plus de détails à venir...
       </li>
     </ul>
-    <h3>Hébergement</h3>
+    <h3 id="hebergement">Hébergement</h3>
+    <img class="jpeg" src="../assets/manoir.jpeg" />
     <ul>
       <li>
         Nous avons l'entièreté du manoir du vendredi au dimanche. Venez en
@@ -16,43 +17,9 @@
         s'il-vous-plait vos fier aux prix indiqués ci-dessous. Vous bénéficiez
         d'un tarif plus avantageux que celui affiché sur le site du manoir.
       </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
     </ul>
-    <h3>Informations utiles</h3>
+    <h3 id="informations">Informations utiles</h3>
     <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
       <li>
         <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
           >vue-loader</a
@@ -80,6 +47,7 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+  color: #445936;
 }
 ul {
   list-style-type: none;
@@ -87,11 +55,12 @@ ul {
 }
 li {
   display: block;
-  margin: 0 auto;
-  max-width: 700px;
+  margin: 20px auto;
+  max-width: 500px;
 }
 a {
-  color: #42b983;
+  color: #445936;
+  text-decoration: none;
 }
 .lieu {
   font-size: 25px;

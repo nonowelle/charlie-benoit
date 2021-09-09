@@ -8,7 +8,6 @@
       >.
     </p>
     <img class="jpeg" src="../assets/istockphoto-1147779582-612x612.jpeg" />
-    <img class="jpeg" src="../assets/manoir.jpeg" />
   </div>
 </template>
 
@@ -22,26 +21,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 h1 {
   color: #445936;
   font-size: 45px;
 }
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: block;
-  margin: 0 auto;
-  max-width: 700px;
-}
-a {
-  color: #42b983;
-}
+
 .lieu {
   font-size: 25px;
 }
@@ -51,5 +36,6 @@ a {
   width: auto;
   max-width: 600px;
   margin: 30px 30px;
+  border-radius: 8px;
 }
 </style>
