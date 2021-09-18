@@ -1,5 +1,10 @@
 .navigation {
   border-bottom: 1px solid $header-border;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: $background-light;
+  padding: 0 50px;
 }
 
 li {
@@ -13,7 +18,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  // padding: 1rem 1.5rem;
 }
 .hamburger {
   display: none;

@@ -1,16 +1,40 @@
 .header {
   padding: 60px 30px;
-}
+  background: url("../../assets/C&B-7091.jpg");
+  background-position-y: 20%;
+  background-size: cover;
+  color: $background-light;
+  height: 100vh;
 
-.lieu {
-  font-size: 25px;
-  margin: 0;
-}
-.jpeg {
-  display: inline-block;
-  height: 100%;
-  width: auto;
-  max-width: 600px;
-  margin: 60px 30px;
-  border-radius: 8px;
+  .wrapper {
+    height: 100%;
+    max-width: 600px;
+    margin: 310px auto;
+  }
+
+  .title {
+    margin-top: 30px;
+    color: $background-light;
+  }
+
+  .lieu {
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+  }
+  .date {
+    font-weight: bold;
+  }
+  .jpeg {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    max-width: 600px;
+    margin: 40px 30px;
+    border-radius: 8px;
+  }
+  .arrow {
+    margin-top: 30px;
+    font-size: 30px;
+  }
 }

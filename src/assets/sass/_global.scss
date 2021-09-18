@@ -20,7 +20,7 @@ body {
 
 h1 {
   color: $dark-blue;
-  font-size: 64px;
+  font-size: 65px;
 }
 h3 {
   margin: 40px 0 0;
@@ -30,21 +30,37 @@ h3 {
 //buttons
 
 .button {
-  background-color: $dark-blue;
+  background-color: $background-light;
+  border: 1px solid white;
   border-radius: 4px;
-  font-size: 24px;
-  color: $background-light;
+  font-size: 18px;
+  color: $dark-blue;
   display: block;
   text-align: center;
-  margin: 0 auto;
-
-  &:hover {
-    background-color: $dark-blue-hover;
-  }
+  margin: 30px auto;
 
   &.large {
     width: 133px;
-    height: 62px;
+
     padding: 10px 25px;
+  }
+
+  &.small {
+    padding: 5px 20px;
+    margin: 0;
+  }
+
+  &.dark {
+    background-color: $dark-blue;
+    color: $background-light;
+
+    &.invert {
+      background-color: transparent;
+      border: 1px solid $dark-blue;
+      color: $dark-blue;
+    }
+    &:hover {
+      background-color: $dark-blue-hover;
+    }
   }
 }
