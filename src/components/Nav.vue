@@ -5,13 +5,13 @@
         <a href="#" class="nav-logo"></a>
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="#horaire" class="nav-link">Le mariage</a>
+            <a href="#mariage" class="nav-link">Le mariage</a>
           </li>
           <li class="nav-item">
             <a href="#hebergement" class="nav-link">Hébergement</a>
           </li>
           <li class="nav-item">
-            <a href="#informations" class="nav-link">Infos utils</a>
+            <a href="#informations" class="nav-link">Infos utiles</a>
           </li>
           <li class="nav-item">
             <a href="#rsvp" class="button small dark invert">RSVP</a>

@@ -1,0 +1,58 @@
+.mariage {
+  background-color: $dark-blue;
+  height: 100vh;
+  padding: 150px 30px;
+
+  color: $background-light;
+
+  svg {
+    width: 40px;
+    height: auto;
+  }
+
+  .champagne {
+    color: $background-light;
+    font-size: 24px;
+  }
+
+  &-title {
+    color: $background-light;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+
+    &-quand {
+      padding: 40px 30px;
+      width: 400px;
+    }
+
+    .separator {
+      content: " ";
+      margin: 50px 0 0 0;
+      height: 100px;
+      border-left: 2px solid $background-light;
+      align-self: center;
+    }
+
+    &-ou {
+      padding: 40px 30px;
+
+      width: 400px;
+    }
+  }
+  .button {
+    &.large {
+      &.invert {
+        margin: 0 auto;
+        font-size: 16px;
+        width: 18%;
+      }
+    }
+  }
+}

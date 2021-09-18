@@ -24,7 +24,11 @@ h1 {
 }
 h3 {
   margin: 40px 0 0;
-  color: $dark-blue;
+  font-size: 28px;
+}
+h4 {
+  margin: 40px 0 15px 0;
+  font-size: 20px;
 }
 
 //buttons
@@ -55,12 +59,14 @@ h3 {
     color: $background-light;
 
     &.invert {
-      background-color: transparent;
+      background-color: $background-light;
       border: 1px solid $dark-blue;
       color: $dark-blue;
+      transition: background-color, color 0.3s ease;
     }
     &:hover {
       background-color: $dark-blue-hover;
+      color: $background-light;
     }
   }
 }

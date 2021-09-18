@@ -7,9 +7,8 @@
   height: 100vh;
 
   .wrapper {
-    height: 100%;
     max-width: 600px;
-    margin: 310px auto;
+    margin: 310px auto 0 auto;
   }
 
   .title {
@@ -36,5 +35,20 @@
   .arrow {
     margin-top: 30px;
     font-size: 30px;
+    cursor: pointer;
+    animation: slide 4s ease-in-out;
+    animation-iteration-count: infinite;
+    @keyframes slide {
+      0% {
+        transform: translateY(8px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+
+      100% {
+        transform: translateY(8px);
+      }
+    }
   }
 }
