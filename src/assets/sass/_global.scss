@@ -1,0 +1,21 @@
+#app {
+  font-family: "Kaisei HarunoUmi", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body {
+  background-color: $background-light;
+}
+
+//typography
+
+h1 {
+  color: $dark-blue;
+  font-size: 45px;
+}
+h3 {
+  margin: 40px 0 0;
+  color: $dark-blue;
+}

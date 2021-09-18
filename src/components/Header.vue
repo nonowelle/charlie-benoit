@@ -21,21 +21,3 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-h1 {
-  color: #445936;
-  font-size: 45px;
-}
-
-.lieu {
-  font-size: 25px;
-}
-.jpeg {
-  display: inline-block;
-  height: 100%;
-  width: auto;
-  max-width: 600px;
-  margin: 30px 30px;
-  border-radius: 8px;
-}
-</style>

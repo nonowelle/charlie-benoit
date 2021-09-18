@@ -42,27 +42,3 @@ export default {
   name: "Infos",
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-  color: #445936;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: block;
-  margin: 20px auto;
-  max-width: 500px;
-}
-a {
-  color: #445936;
-  text-decoration: none;
-}
-.lieu {
-  font-size: 25px;
-}
-</style>
