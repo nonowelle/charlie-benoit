@@ -1,13 +1,13 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <h1>{{ msg }}</h1>
-    <p>
-      <span class="lieu"
-        >Nous avons le plaisir de vous inviter à notre mariage<br />
-        au Manoir Stone Haven le samedi 28 mai 2022</span
-      >.
+    <p class="lieu">
+      ont le plaisir de vous inviter à leur mariage!
     </p>
+    <br />
+    <p>28/05/2022 | Manoir Stonehaven</p>
     <img class="jpeg" src="../assets/istockphoto-1147779582-612x612.jpeg" />
+    <a class="button large" href="">RSVP</a>
   </div>
 </template>
 
@@ -19,5 +19,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->

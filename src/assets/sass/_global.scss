@@ -7,15 +7,44 @@
 
 body {
   background-color: $background-light;
+  color: $dark-blue;
 }
 
 //typography
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1 {
   color: $dark-blue;
-  font-size: 45px;
+  font-size: 64px;
 }
 h3 {
   margin: 40px 0 0;
   color: $dark-blue;
+}
+
+//buttons
+
+.button {
+  background-color: $dark-blue;
+  border-radius: 4px;
+  font-size: 24px;
+  color: $background-light;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: $dark-blue-hover;
+  }
+
+  &.large {
+    width: 133px;
+    height: 62px;
+    padding: 10px 25px;
+  }
 }

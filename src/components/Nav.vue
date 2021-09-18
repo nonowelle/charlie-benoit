@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header">
+    <header class="navigation">
       <nav class="navbar">
         <a href="#" class="nav-logo"></a>
         <ul class="nav-menu">

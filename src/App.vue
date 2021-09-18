@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav />
-    <Header msg="Benoit et Charlie" />
+    <Header msg="-Benoit et Charlie-" />
     <Infos />
   </div>
 </template>
