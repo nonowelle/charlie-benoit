@@ -48,6 +48,8 @@
       <div class="details-quand">
         <h4>Quand?</h4>
         <p>samedi le 28 mai 2022</p>
+        <div class="separator horizontal"></div>
+        <p>Plus de détails à venir</p>
       </div>
       <div class="separator"></div>
       <div class="details-ou">
@@ -60,6 +62,7 @@
       </div>
     </div>
     <a class="button large invert">Voir la carte</a>
+    <i class="arrow fas fa-angle-down"></i>
   </div>
 </template>
 
