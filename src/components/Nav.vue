@@ -5,16 +5,30 @@
         <a href="#" class="nav-logo"></a>
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="#mariage" class="nav-link">Le mariage</a>
+            <a href="#mariage" v-scroll-to="'#mariage'" class="nav-link"
+              >Le mariage</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#hebergement" class="nav-link">Hébergement</a>
+            <a href="#hebergement" v-scroll-to="'#hebergement'" class="nav-link"
+              >Hébergement</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#informations" class="nav-link">Infos utiles</a>
+            <a
+              href="#informations"
+              v-scroll-to="'#informations'"
+              class="nav-link"
+              >Infos utiles</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#rsvp" class="button small dark invert">RSVP</a>
+            <a
+              href="#rsvp"
+              v-scroll-to="'#rsvp'"
+              class="button small dark invert"
+              >RSVP</a
+            >
           </li>
         </ul>
         <div class="hamburger">

@@ -8,8 +8,8 @@
       <br />
       <p class="date">28/05/2022 | Manoir Stonehaven</p>
 
-      <a class="button large" @click="goto('rsvp')" href="#rsvp">RSVP</a>
-      <i class="arrow fas fa-angle-down"></i>
+      <a class="button large" v-scroll-to="'#rsvp'" href="#rsvp">RSVP</a>
+      <i class="arrow fas fa-angle-down" v-scroll-to="'#mariage'"></i>
     </div>
   </div>
 </template>
@@ -19,14 +19,6 @@ export default {
   name: "Header",
   props: {
     msg: String,
-  },
-  methods: {
-    goto(refName) {
-      var element = this.$refs[refName];
-      var top = element.offsetTop;
-
-      window.scrollTo(0, top);
-    },
   },
 };
 </script>

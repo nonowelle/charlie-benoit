@@ -62,7 +62,7 @@
       </div>
     </div>
     <a class="button large invert">Voir la carte</a>
-    <i class="arrow fas fa-angle-down"></i>
+    <i class="arrow fas fa-angle-down" v-scroll-to="'#rsvp'"></i>
   </div>
 </template>
 
