@@ -3,7 +3,7 @@
     <header class="navigation">
       <nav class="navbar">
         <a href="#" class="nav-logo"></a>
-        <ul class="nav-menu">
+        <ul class="nav-menu" @click="navMenuToggle">
           <li class="nav-item">
             <a href="#mariage" v-scroll-to="'#mariage'" class="nav-link"
               >Le mariage</a
@@ -43,7 +43,19 @@
 
 <script>
 export default {
+   const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
   name: "Nav",
+  methods: {
+    navMenuToggle: function() {
+
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      this.hamburger.classList.toggle("active");
+      this.navMenu.classList.toggle("active");
+    },
+  },
 };
 </script>
 

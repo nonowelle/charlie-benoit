@@ -1,9 +1,13 @@
 .mariage {
   background-color: $dark-blue;
   height: 100vh;
-  padding: 120px 30px;
+  padding: 120px 30px 90px 30px;
 
   color: $background-light;
+
+  @media (max-width: 770px) {
+    padding: 80px 30px;
+  }
 
   svg {
     width: 40px;
@@ -22,9 +26,17 @@
     justify-content: space-evenly;
     margin-bottom: 40px;
 
+    @media (max-width: 770px) {
+      flex-direction: column;
+    }
+
     &-quand {
       padding: 40px 30px;
       width: 400px;
+      @media (max-width: 770px) {
+        width: 100%;
+        padding: 20px 30px;
+      }
     }
 
     .separator {
@@ -33,6 +45,13 @@
       height: 100px;
       border-left: 2px solid $background-light;
       align-self: center;
+
+      @media (max-width: 770px) {
+        height: 1px;
+        width: 50px;
+        border-left: none;
+        border-top: 2px solid $background-light;
+      }
 
       &.horizontal {
         height: 1px;
@@ -48,6 +67,10 @@
       padding: 40px 30px;
 
       width: 400px;
+      @media (max-width: 770px) {
+        width: 100%;
+        padding: 20px 30px;
+      }
     }
   }
   .button {
@@ -55,12 +78,15 @@
       &.invert {
         margin: 0 auto;
         font-size: 16px;
-        width: 18%;
+        // width: 18%;
       }
     }
   }
 
   .arrow {
     margin-top: 120px;
+    @media (max-width: 770px) {
+      margin-top: 45px;
+    }
   }
 }
