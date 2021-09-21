@@ -43,19 +43,7 @@
 
 <script>
 export default {
-   const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
   name: "Nav",
-  methods: {
-    navMenuToggle: function() {
-
-
-      hamburger.addEventListener("click", mobileMenu);
-
-      this.hamburger.classList.toggle("active");
-      this.navMenu.classList.toggle("active");
-    },
-  },
 };
 </script>
 

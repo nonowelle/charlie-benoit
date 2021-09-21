@@ -1,8 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
+import router from "./router";
 
 import "@/assets/sass/_styles.scss";
 const VueScrollTo = require("vue-scrollto");
+
+Vue.use(router);
 
 // You can also pass in the default options
 Vue.use(VueScrollTo, {
@@ -24,3 +27,7 @@ Vue.config.productionTip = false;
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");
+
+new Vue({
+  render: (h) => h(App),
+}).$mount("#Home");
