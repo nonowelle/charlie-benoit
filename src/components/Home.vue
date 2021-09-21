@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <Nav />
-    <Header msg="-Benoit et Charlie-" />
+    <Header />
     <Mariage />
     <RSVP />
     <!-- <router-view></router-view> -->
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Header from "./Header.vue";
 
-import Nav from "./components/Nav.vue";
-import Mariage from "./components/Mariage.vue";
+import Nav from "./Nav.vue";
+import Mariage from "./Mariage.vue";
 
-import RSVP from "./components/RSVP.vue";
+import RSVP from "./RSVP.vue";
 
 export default {
   name: "Home",

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="wrapper">
-      <h1 class="title">{{ msg }}</h1>
+      <h1 class="title">-Benoit et Charlie-</h1>
       <p class="lieu">
         ont le plaisir de vous inviter à leur mariage!
       </p>

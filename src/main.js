@@ -1,14 +1,18 @@
-import Vue from "vue";
+// import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
 import "@/assets/sass/_styles.scss";
+import { createApp } from "vue";
 const VueScrollTo = require("vue-scrollto");
 
-Vue.use(router);
+//
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
 
 // You can also pass in the default options
-Vue.use(VueScrollTo, {
+app.use(VueScrollTo, {
   container: "body",
   duration: 1000,
   easing: "ease",
@@ -22,12 +26,8 @@ Vue.use(VueScrollTo, {
   y: true,
 });
 
-Vue.config.productionTip = false;
+app.config.productionTip = false;
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
-
-new Vue({
-  render: (h) => h(App),
-}).$mount("#Home");
+// new Vue({
+//   render: (h) => h(App),
+// }).$mount("#Home");
