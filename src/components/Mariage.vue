@@ -61,7 +61,12 @@
         </p>
       </div>
     </div>
-    <a class="button large invert">Voir la carte</a>
+    <a
+      class="button large invert"
+      href="https://g.page/StoneHavenLeManoir?share"
+      target="_blank"
+      >Voir la carte</a
+    >
     <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
   </div>
 </template>

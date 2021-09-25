@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-// import router from "./router";
+import router from "./router";
 
 import "@/assets/sass/_styles.scss";
 import VueSmoothScroll from "vue2-smooth-scroll";
@@ -15,7 +15,7 @@ Vue.use(VueSmoothScroll, {
 
 //
 new Vue({
-  // router,
+  router,
   render: (h) => h(App),
 }).$mount("#app");
 

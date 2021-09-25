@@ -4,7 +4,7 @@
   background-position-y: 20%;
   background-size: cover;
   color: $background-light;
-  height: 100vh;
+  min-height: 100vh;
 
   @media (max-width: 770px) {
     background-position-x: 40%;
@@ -12,7 +12,7 @@
 
   .wrapper {
     max-width: 600px;
-    margin: 310px auto 0 auto;
+    margin: 300px auto 0 auto;
   }
 
   .title {
