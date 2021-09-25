@@ -8,8 +8,8 @@
       <br />
       <p class="date">28/05/2022 | Manoir Stonehaven</p>
 
-      <a class="button large" v-scroll-to="'#rsvp'" href="#rsvp">RSVP</a>
-      <i class="arrow fas fa-angle-down" v-scroll-to="'#mariage'"></i>
+      <a class="button large" href="#rsvp">RSVP</a>
+      <i class="arrow fas fa-angle-down"></i>
     </div>
   </div>
 </template>

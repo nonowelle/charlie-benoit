@@ -1,7 +1,7 @@
 .mariage {
   background-color: $dark-blue;
-  height: 100vh;
-  padding: 120px 30px 90px 30px;
+  min-height: 100vh;
+  padding: 100px 30px 100px 30px;
 
   color: $background-light;
 
@@ -31,7 +31,7 @@
     }
 
     &-quand {
-      padding: 40px 30px;
+      // padding: 40px 30px;
       width: 400px;
       @media (max-width: 770px) {
         width: 100%;
@@ -64,7 +64,7 @@
     }
 
     &-ou {
-      padding: 40px 30px;
+      // padding: 40px 30px;
 
       width: 400px;
       @media (max-width: 770px) {
@@ -84,7 +84,7 @@
   }
 
   .arrow {
-    margin-top: 120px;
+    margin-top: 80px;
     @media (max-width: 770px) {
       margin-top: 45px;
     }

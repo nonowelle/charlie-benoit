@@ -1,32 +1,25 @@
-// import Vue from "vue";
+import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
+// import router from "./router";
 
 import "@/assets/sass/_styles.scss";
-import { createApp } from "vue";
-const VueScrollTo = require("vue-scrollto");
+import VueSmoothScroll from "vue2-smooth-scroll";
 
-//
-const app = createApp(App);
-app.use(router);
-app.mount("#app");
+Vue.config.productionTip = false;
 
-// You can also pass in the default options
-app.use(VueScrollTo, {
-  container: "body",
+Vue.use(VueSmoothScroll, {
   duration: 1000,
-  easing: "ease",
-  offset: -40,
-  force: true,
-  cancelable: true,
-  onStart: false,
-  onDone: false,
-  onCancel: false,
-  x: false,
-  y: true,
+  updateHistory: false,
+  offset: -70,
 });
 
-app.config.productionTip = false;
+//
+new Vue({
+  // router,
+  render: (h) => h(App),
+}).$mount("#app");
+
+// app.mount("#app");
 
 // new Vue({
 //   render: (h) => h(App),
