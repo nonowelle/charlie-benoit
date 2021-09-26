@@ -1,0 +1,37 @@
+.confirmations-list {
+  min-height: 100vh;
+  padding: 120px 30px;
+
+  h1 {
+    font-size: 45px;
+  }
+  h3 {
+    margin-top: 0;
+  }
+
+  .attending,
+  .not-attending {
+    background-color: transparent;
+    border: 1px solid $dark-blue;
+    max-width: 700px;
+    border-radius: 4px;
+    margin: 30px auto;
+    padding: 30px;
+  }
+
+  .confirmation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .fullname {
+    font-size: 18px;
+    margin-right: 150px;
+  }
+
+  .courriel {
+    font-size: 18px;
+  }
+}
