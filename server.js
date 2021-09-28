@@ -22,7 +22,6 @@ const api_key = process.env.API_KEY;
 
 app.get("/api", async (req, res) => {
   let config = {
-    id: req.params.id,
     method: "get",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
     headers: {
@@ -32,10 +31,10 @@ app.get("/api", async (req, res) => {
   };
 
   await axios(config)
-    .then(async function(response) {
+    .then(function(response) {
       console.log(response.data);
-      data = response.data;
-      res.send(data);
+
+      res.send(response.data);
     })
     .catch(function(error) {
       console.log(error);

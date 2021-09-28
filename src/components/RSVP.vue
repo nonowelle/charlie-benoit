@@ -2,7 +2,7 @@
   <div id="rsvp" ref="rsvp" class="RSVP">
     <div class="img-rsvp"></div>
 
-    <div class="form-wrapper">
+    <form @submit.prevent="submitForm" class="form-wrapper">
       <svg
         width="48"
         height="30"
@@ -30,38 +30,68 @@
       <div class="name-wrapper">
         <input
           type="text"
-          id="prenom"
+          id="firstname"
           required
-          name="prenom"
+          name="firstname"
+          v-model="firstName"
           placeholder="Prénom"
         />
-        <input type="text" id="nom" required name="nom" placeholder="Nom" />
+        <input
+          type="text"
+          id="lastname"
+          required
+          name="lastname"
+          v-model="lastName"
+          placeholder="Nom"
+        />
       </div>
       <input
         type="text"
-        id="courriel"
+        id="email"
         required
-        name="courriel"
+        name="email"
+        v-model="email"
         placeholder="Courriel"
       />
       <div class="checkbox-wrapper">
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" id="yes" v-model="response" />
           <span>J'y serai</span>
         </label>
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" id="no" v-model="response" />
           <span>Je ne pourrai y être</span>
         </label>
       </div>
 
-      <a href="" class="button large dark">Envoyer ma réponse</a>
-    </div>
+      <button class="button large dark">
+        Envoyer ma reponse
+      </button>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      firstName: " ",
+      lastName: "",
+      email: "",
+      response: [],
+    };
+  },
+  methods: {
+    submitForm() {
+      const formData = {
+        first: this.firstName,
+        last: this.lastName,
+        email: this.email,
+        response: this.response,
+      };
+      console.log(formData);
+    },
+  },
   name: "RSVP",
 };
 </script>

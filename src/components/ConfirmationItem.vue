@@ -21,9 +21,10 @@ export default {
   created() {
     fetch("http://localhost:8080/api/", {
       mode: "no-cors",
-    }).then(async (data) => {
-      this.result = data.json();
-      console.log(this.result);
+    }).then((data) => {
+      const resultats = data;
+      console.log(resultats);
+      this.result = resultats;
     });
   },
 };
