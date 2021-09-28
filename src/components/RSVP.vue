@@ -2,7 +2,7 @@
   <div id="rsvp" ref="rsvp" class="RSVP">
     <div class="img-rsvp"></div>
 
-    <form @submit.prevent="submitForm" class="form-wrapper">
+    <form @submit.prevent="submitForm" class="form-wrapper" novalidate>
       <svg
         width="48"
         height="30"
@@ -29,41 +29,60 @@
       <h3>Répondre à l'invitation</h3>
       <div class="name-wrapper">
         <input
+          :class="{ invalid: !firstName.isValid }"
           type="text"
           id="firstname"
           required
           name="firstname"
-          v-model="firstName"
+          v-model="firstName.val"
           placeholder="Prénom"
         />
+        <p v-if="!firstName.isValid">Vous devez écrire un prénom</p>
         <input
+          :class="{ invalid: !lastName.isValid }"
           type="text"
           id="lastname"
           required
           name="lastname"
-          v-model="lastName"
+          v-model="lastName.val"
           placeholder="Nom"
         />
+        <p v-if="!firstName.isValid">Vous devez écrire un nom</p>
       </div>
       <input
         type="text"
         id="email"
         required
         name="email"
-        v-model="email"
+        v-model="email.val"
         placeholder="Courriel"
       />
       <div class="checkbox-wrapper">
-        <label class="checkbox">
-          <input type="checkbox" id="yes" v-model="response" />
+        <label class="checkbox" for="yes">
+          <input
+            type="checkbox"
+            id="yes"
+            v-model="response.val"
+            :class="{ invalid: !response.isValid }"
+          />
           <span>J'y serai</span>
         </label>
-        <label class="checkbox">
-          <input type="checkbox" id="no" v-model="response" />
+        <label class="checkbox" for="no">
+          <input
+            type="checkbox"
+            id="no"
+            v-model="response.val"
+            :class="{ invalid: !response.isValid }"
+          />
           <span>Je ne pourrai y être</span>
         </label>
+        <p v-if="!firstName.isValid">
+          Vous devez selectionner une option
+        </p>
       </div>
-
+      <p v-if="!formIsValid">
+        Please fix the above error before submiting our response again
+      </p>
       <button class="button large dark">
         Envoyer ma reponse
       </button>
@@ -75,14 +94,50 @@
 export default {
   data() {
     return {
-      firstName: " ",
-      lastName: "",
-      email: "",
-      response: [],
+      formIsValid: true,
+      firstName: {
+        val: "",
+        isValid: true,
+      },
+      lastName: {
+        val: "",
+        isValid: true,
+      },
+      email: {
+        val: "",
+        isValid: true,
+      },
+      response: {
+        val: "",
+        isGoing: true,
+      },
     };
   },
   methods: {
+    validateForm() {
+      this.formIsValid = true;
+      if (this.firstName.val === "") {
+        this.firstName.isValid = false;
+        this.formIsValid = false;
+      }
+      if (this.lastName.val === "") {
+        this.lastName.isValid = false;
+        this.formIsValid = false;
+      }
+      if (this.email.val === "") {
+        this.email.isValid = false;
+        this.formIsValid = false;
+      }
+      if (!this.response.val === "") {
+        this.response.isValid = false;
+        this.formIsValid = false;
+      }
+    },
     submitForm() {
+      this.validateForm();
+      if (!this.formIsValid) {
+        return;
+      }
       const formData = {
         first: this.firstName,
         last: this.lastName,
