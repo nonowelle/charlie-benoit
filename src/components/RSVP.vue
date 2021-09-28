@@ -36,9 +36,11 @@
           name="firstname"
           v-model="firstName.val"
           placeholder="Prénom"
+          @blur="clearValidity('firstName')"
         />
-        <p v-if="!firstName.isValid">Vous devez écrire un prénom</p>
+
         <input
+          @blur="clearValidity('lastName')"
           :class="{ invalid: !lastName.isValid }"
           type="text"
           id="lastname"
@@ -47,9 +49,10 @@
           v-model="lastName.val"
           placeholder="Nom"
         />
-        <p v-if="!firstName.isValid">Vous devez écrire un nom</p>
       </div>
       <input
+        :class="{ invalid: !lastName.isValid }"
+        @blur="clearValidity('email')"
         type="text"
         id="email"
         required
@@ -60,6 +63,7 @@
       <div class="checkbox-wrapper">
         <label class="checkbox" for="yes">
           <input
+            @blur="clearValidity('response')"
             type="checkbox"
             id="yes"
             v-model="response.val"
@@ -71,8 +75,8 @@
           <input
             type="checkbox"
             id="no"
-            v-model="response.val"
-            :class="{ invalid: !response.isValid }"
+            v-model="responseNo.val"
+            :class="{ invalid: !responseNo.isValid }"
           />
           <span>Je ne pourrai y être</span>
         </label>
@@ -80,9 +84,7 @@
           Vous devez selectionner une option
         </p>
       </div>
-      <p v-if="!formIsValid">
-        Please fix the above error before submiting our response again
-      </p>
+
       <button class="button large dark">
         Envoyer ma reponse
       </button>
@@ -92,6 +94,7 @@
 
 <script>
 export default {
+  name: "RSVP",
   data() {
     return {
       formIsValid: true,
@@ -109,11 +112,16 @@ export default {
       },
       response: {
         val: "",
-        isGoing: true,
+      },
+      responseNo: {
+        val: "",
       },
     };
   },
   methods: {
+    clearValidity(input) {
+      this[input].isValid = true;
+    },
     validateForm() {
       this.formIsValid = true;
       if (this.firstName.val === "") {
@@ -143,10 +151,10 @@ export default {
         last: this.lastName,
         email: this.email,
         response: this.response,
+        responseNo: this.responseNo,
       };
       console.log(formData);
     },
   },
-  name: "RSVP",
 };
 </script>
