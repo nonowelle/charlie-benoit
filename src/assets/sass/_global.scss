@@ -8,6 +8,10 @@
 body {
   background-color: $background-light;
   color: $dark-blue;
+  font-family: "Kaisei HarunoUmi", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 //typography

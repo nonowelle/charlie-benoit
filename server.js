@@ -62,10 +62,10 @@ app.get("/confirmations", (_req, res) => {
   axios(config)
     .then((response) => {
       console.log("IN THE RESPONSE");
-      console.log(response.data);
+
       res.send(response.data);
 
-      // res.send(JSON.stringify(response.data));
+      res.send(JSON.stringify(response.data));
     })
     .catch(function(error) {
       console.log(error.message);

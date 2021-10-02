@@ -110,6 +110,10 @@
     width: 100%;
     margin: 35px 20px 0 0;
     transition: background-color, color 0.3s ease;
+    font-family: "Kaisei HarunoUmi", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 
     &:last-of-type {
       margin: 35px 0 0 0;
