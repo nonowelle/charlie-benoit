@@ -2,7 +2,7 @@
   <div>
     <header class="navigation">
       <nav class="navbar">
-        <a href="#" class="nav-logo"></a>
+        <a href="#header" v-smooth-scroll class="nav-logo">B & C </a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="#mariage" v-smooth-scroll class="nav-link">Le mariage</a>

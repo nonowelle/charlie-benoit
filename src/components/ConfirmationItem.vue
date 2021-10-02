@@ -14,18 +14,20 @@ export default {
     return {
       result: [],
       responseAvailable: false,
-      apiKey: process.env.API_KEY,
     };
   },
 
   created() {
-    fetch("http://localhost:8080/api/", {
-      mode: "no-cors",
-    }).then((data) => {
-      const resultats = data;
-      console.log(resultats);
-      this.result = resultats;
-    });
+    fetch("http://localhost:8080/confirmations")
+      .then((response) => {
+        const resultats = response.json();
+        console.log(resultats);
+        //mettre la logique ici pour extraire les donn/es a afficher comme uneliste
+        //arrannger les check boxes et mettre une fonction post dans le formulaire
+      })
+      .catch(function(error) {
+        console.log(error.message);
+      });
   },
 };
 </script>

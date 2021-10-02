@@ -86,7 +86,7 @@
       </div>
 
       <button class="button large dark">
-        Envoyer ma reponse
+        Envoyer ma réponse
       </button>
     </form>
   </div>
