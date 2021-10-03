@@ -22,6 +22,20 @@ body {
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px;
+}
+a {
+  text-decoration: none;
+}
+
 h1 {
   color: $dark-blue;
   font-size: 65px;
@@ -92,23 +106,6 @@ h4 {
 
     100% {
       transform: translateY(8px);
-    }
-  }
-
-  .arrow-left {
-    animation: slide-left 4s ease-in-out;
-    animation-iteration-count: infinite;
-    @keyframes slide-left {
-      0% {
-        transform: translateX(8px);
-      }
-      50% {
-        transform: translateX(-8px);
-      }
-
-      100% {
-        transform: translateX(8px);
-      }
     }
   }
 }

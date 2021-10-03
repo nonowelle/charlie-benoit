@@ -1,5 +1,5 @@
 <template>
-  <div class="infos">
+  <div class="infos" id="infos">
     <h3 id="informations">Informations utiles</h3>
     <ul>
       <li>
@@ -24,6 +24,7 @@
         >
       </li>
     </ul>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
   </div>
 </template>
 

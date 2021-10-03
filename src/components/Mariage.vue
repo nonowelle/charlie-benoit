@@ -67,7 +67,7 @@
       target="_blank"
       >Voir la carte</a
     >
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#infos"></i>
   </div>
 </template>
 
