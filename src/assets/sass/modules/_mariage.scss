@@ -1,9 +1,14 @@
 .mariage {
   background-color: $dark-blue;
   min-height: 100vh;
-  padding: 100px 30px 100px 30px;
+  padding: 0 30px;
 
   color: $background-light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 770px) {
     padding: 80px 30px;
@@ -12,6 +17,7 @@
   svg {
     width: 40px;
     height: auto;
+    margin: 0 auto;
   }
 
   &-title {

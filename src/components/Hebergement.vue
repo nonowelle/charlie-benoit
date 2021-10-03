@@ -1,6 +1,6 @@
 <template>
-  <div class="hebergement-wrapper swiper" id="hebergement-wrapper">
-    <div class="hebergement swiper-slide">
+  <div class="hebergement-wrapper" id="hebergement-wrapper">
+    <div class="hebergement">
       <div class="hebergement-desc">
         <h3 id="hebergement-title">Hébergement</h3>
         <p>
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#infos"></i>
   </div>
 </template>
 

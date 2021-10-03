@@ -2,6 +2,39 @@
   min-height: 100vh;
   margin: 0 auto;
   padding: 100px;
+  background-color: $light-pink;
+  color: $dark-blue;
+
+  &-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-par {
+    max-width: 650px;
+    margin: 0 60px;
+    font-size: 1.2rem;
+  }
+
+  .liste-hotels {
+    max-width: 650px;
+    margin: 30px 60px;
+
+    li {
+      margin: 10px;
+      a {
+        &:hover {
+          color: #282bf6;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin: 40px 0;
+  }
 
   a {
     color: $dark-blue;

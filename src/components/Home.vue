@@ -4,8 +4,9 @@
       <Nav />
       <Header />
       <Mariage />
-      <Infos />
+
       <Hebergement />
+      <Infos />
       <RSVP />
       <Footer />
     </div>
