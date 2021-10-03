@@ -156,11 +156,28 @@ export default {
         return;
       }
       const formData = {
-        first: this.firstName,
-        last: this.lastName,
-        email: this.email,
+        first: this.firstName.val,
+        last: this.lastName.val,
+        email: this.email.val,
+        phone: this.phone.val,
+        response: this.picked.val,
       };
+
       console.log(formData);
+
+      const data = formData;
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+
+      fetch("http://localhost:8080/confirmations", options);
+
+      //mettre la logique ici pour extraire les donn/es a afficher comme uneliste
+      //arrannger les check boxes et mettre une fonction post dans le formulaire
     },
   },
 };

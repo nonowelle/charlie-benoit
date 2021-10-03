@@ -72,40 +72,9 @@ app.get("/confirmations", (_req, res) => {
     });
 });
 
-// app.post("/confirmations", async (req, res) => {
-//   const lastName = req.body.name;
-//   const firstName = req.body.firstName;
-//   const email = req.body.email;
-
-//   //POST REQUEST TO COVEO API
-//   const params = new URLSearchParams();
-//   params.append("email", email);
-//   params.append("firstname", firstName);
-//   params.append("lastname", lastName);
-//   let requestOptions = {
-//     method: "POST",
-//     headers: {
-//       "x-apikey": api_key,
-//       "Content-Type": "application/x-www-form-urlencoded",
-//     },
-//     body: params,
-//     redirect: "follow",
-//   };
-
-//   fetch("https://isfrontendtest.coveo.com/rest/registration", requestOptions)
-//     .then((response) => response.json())
-//     .then((result) => {
-//       const message = result;
-//       console.log(message);
-
-//       if (message._createdby) {
-//         res.send(message);
-//       } else {
-//         res.send(message);
-//       }
-//     })
-//     .catch((error) => console.log("error", error));
-// });
+app.post("/confirmations", (req, res) => {
+  console.log(req.body);
+});
 
 // Make the app listen to a port
 app.listen(port, () => {
