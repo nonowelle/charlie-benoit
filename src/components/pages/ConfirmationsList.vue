@@ -13,10 +13,11 @@
             :key="person._id"
             class="confirmation confirmations-wrapper"
           >
-            <li class="personne ">
+            <li class="personne" v-if="person.answer === 'Yes'">
               {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
               {{ person.email }}
               {{ person.phone }}
+              {{ person.answer }}
             </li>
           </ol>
         </div>
@@ -29,10 +30,11 @@
             :key="person._id"
             class="confirmation confirmations-wrapper"
           >
-            <li class="personne ">
+            <li class="personne" v-if="person.answer === 'No'">
               {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
               {{ person.email }}
               {{ person.phone }}
+              {{ person.answer }}
             </li>
           </ol>
         </div>
@@ -80,13 +82,16 @@ export default {
             const email = person.email;
             const firstName = person.firstName;
             const lastName = person.lastName;
-            const attending = person.attending;
+            const answer = person.answer;
+            const phone = person.phone;
 
             const invite = {};
             invite.email = email;
             invite.firstName = firstName;
             invite.lastName = lastName;
-            invite.attending = attending;
+            invite.answer = answer;
+            invite.phone = phone;
+            console.log(invite);
 
             this.result.push(invite);
           }
@@ -96,14 +101,10 @@ export default {
         });
       this.isLoading = false;
     },
-    delayedList() {
-      window.setTimeout(this.loadConfirmations, 5000);
-    },
   },
 
   created() {
-    // this.loadConfirmations();
-    this.delayedList();
+    this.loadConfirmations();
   },
 };
 </script>

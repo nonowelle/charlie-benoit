@@ -2,7 +2,12 @@
   <div id="rsvp" ref="rsvp" class="RSVP">
     <div class="img-rsvp"></div>
 
-    <form @submit.prevent="submitForm" class="form-wrapper" novalidate>
+    <form
+      @submit.prevent="submitForm"
+      class="form-wrapper"
+      novalidate
+      v-if="!formSubmitted"
+    >
       <svg
         width="48"
         height="30"
@@ -27,6 +32,12 @@
       </svg>
 
       <h3>Répondre à l'invitation</h3>
+      <div class="avertissement">
+        Les places au mariage étant limitées, nous vous demandons d'être certain
+        de votre réponse avec de confirmer votre présence. Merci de votre
+        compréhension!
+      </div>
+
       <div class="name-wrapper">
         <input
           :class="{ invalid: !firstName.isValid }"
@@ -87,15 +98,34 @@
           <span>Je ne pourrai y être</span>
         </label>
       </div>
-
-      <div class="invalid-response" v-if="picked.val === ''">
-        <p>Vous devez sélectionner une option</p>
+      <p :class="{ radioInvalid: !picked.isValid }" v-if="!picked.val">
+        Veuillez choisir une option.
+      </p>
+      <div>
+        <button class="button large dark">
+          Envoyer ma réponse
+        </button>
       </div>
 
-      <button class="button large dark">
-        Envoyer ma réponse
-      </button>
+      <div class="dialog" v-if="dialogOpen">
+        <p>Etes-vous sur de vouloir envoyer votre reponse?</p>
+        <button :click="closeDialog()">Oui!</button>
+      </div>
     </form>
+    <div v-if="formSubmitted" class="submitted">
+      <h3>
+        Merci d'avoir envoyé votre réponse!
+      </h3>
+      <p>N'hésitez pas à nous contacter si vous avez des questions.</p>
+      <div class="contact">
+        <p>charlieduret@gmail.com</p>
+        <p>514-708-2179</p>
+      </div>
+      <div class="contact">
+        <p>benoit???@gmail.com</p>
+        <p>514-804-1872</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -104,6 +134,8 @@ export default {
   name: "RSVP",
   data() {
     return {
+      dialogOpen: false,
+      formSubmitted: false,
       formIsValid: true,
       firstName: {
         val: "",
@@ -128,10 +160,17 @@ export default {
     };
   },
   methods: {
+    openDialog() {
+      this.dialogOpen = true;
+    },
+    closeDialog() {
+      this.dialogOpen = false;
+    },
     clearValidity(input) {
       this[input].isValid = true;
     },
     validateForm() {
+      this.dialogOpen = false;
       this.formIsValid = true;
       if (this.firstName.val === "") {
         this.firstName.isValid = false;
@@ -149,9 +188,14 @@ export default {
         this.phone.isValid = false;
         this.formIsValid = false;
       }
+      if (this.picked.val === "") {
+        this.picked.isValid = false;
+        this.formIsValid = false;
+      }
     },
     submitForm() {
       this.validateForm();
+
       if (!this.formIsValid) {
         return;
       }
@@ -176,8 +220,7 @@ export default {
 
       fetch("http://localhost:8080/confirmations", options);
 
-      //mettre la logique ici pour extraire les donn/es a afficher comme uneliste
-      //arrannger les check boxes et mettre une fonction post dans le formulaire
+      this.formSubmitted = true;
     },
   },
 };

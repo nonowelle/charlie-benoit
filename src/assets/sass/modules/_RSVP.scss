@@ -23,13 +23,48 @@
     width: 100%;
   }
 
-  .form-wrapper {
+  .radioInvalid {
+    color: red;
+  }
+
+  .avertissement {
+    margin-top: 20px;
+    max-width: 460px;
+    margin-bottom: 20px;
+  }
+
+  .submitted {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 30px;
+    h3 {
+      margin-top: 150px;
+      margin-bottom: 30px;
+    }
+    .contact {
+      margin-top: 50px;
+      p {
+        font-size: 1.1em;
+      }
+    }
+    p {
+      max-width: 400px;
+      font-size: 1.4em;
+      margin-top: 15px;
+    }
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 90px;
+
     @media (max-width: 770px) {
       margin-top: 30px;
     }
@@ -58,8 +93,8 @@
     }
 
     input[type="text"] {
-      margin: 35px 0 0 20px;
-      height: 70px;
+      margin: 20px 0 0 20px;
+      height: 50px;
       width: 40%;
       background-color: $header-border;
       border: none;
@@ -81,7 +116,7 @@
 
       &:last-of-type {
         width: 80%;
-        margin: 35px 0 0 0;
+        margin: 20px 0 0 0;
       }
     }
   }
@@ -93,7 +128,7 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin: 30px 0;
+    margin: 20px 0;
 
     span {
       margin-top: 35px;
@@ -109,7 +144,7 @@
     border: 1px solid $dark-blue;
     padding: 20px;
     width: 100%;
-    margin: 35px 20px 0 0;
+    margin: 20px 20px 0 0;
     transition: background-color, color 0.3s ease;
     font-family: "Kaisei HarunoUmi", serif;
     -webkit-font-smoothing: antialiased;
@@ -117,10 +152,10 @@
     text-align: center;
 
     &:last-of-type {
-      margin: 35px 0 0 0;
+      margin: 30px 0 0 0;
     }
     &.large {
-      width: 80%;
+      width: 100%;
     }
   }
 }
