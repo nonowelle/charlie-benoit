@@ -39,16 +39,6 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-// Display the files in public folder
-// app.use(express.static("public"));
-
-// app.use((_req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "http//:localhost:8081");
-//   next();
-// });
-
-//Get the data from the DB
-
 app.get("/confirmations", (_req, res) => {
   let config = {
     method: "get",
@@ -74,6 +64,39 @@ app.get("/confirmations", (_req, res) => {
 
 app.post("/confirmations", (req, res) => {
   console.log(req.body);
+  const answer = {
+    lastName: req.body.last,
+    firstName: req.body.first,
+    email: req.body.email,
+    phone: req.body.phone,
+    answer: req.body.response,
+  };
+  console.log(answer);
+  var request = require("request");
+
+  var options = {
+    method: "POST",
+    url: "https://confirmations-1a40.restdb.io/rest/invites",
+    headers: {
+      "cache-control": "no-cache",
+      "x-apikey": "1cafe281210a9ab5837d477312051f4143e0c",
+      "content-type": "application/json",
+    },
+    body: {
+      lastName: req.body.last,
+      firstName: req.body.first,
+      email: req.body.email,
+      phone: req.body.phone,
+      answer: req.body.response,
+    },
+    json: true,
+  };
+
+  request(options, function(error, response, body) {
+    if (error) throw new Error(error);
+
+    console.log(body);
+  });
 });
 
 // Make the app listen to a port
