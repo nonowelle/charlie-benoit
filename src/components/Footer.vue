@@ -1,7 +1,7 @@
 <template>
-  <a href="http://menoel.com/" class=" footer"
-    >Conception Web : Marie-Ève Noël - 2021</a
-  >
+  <div class="footer">
+    <a href="http://menoel.com/">Conception Web : Marie-Ève Noël - 2021</a>
+  </div>
 </template>
 
 <script>

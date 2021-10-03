@@ -51,7 +51,7 @@
         />
       </div>
       <input
-        :class="{ invalid: !lastName.isValid }"
+        :class="{ invalid: !email.isValid }"
         @blur="clearValidity('email')"
         type="text"
         id="email"
@@ -59,6 +59,16 @@
         name="email"
         v-model="email.val"
         placeholder="Courriel"
+      />
+      <input
+        :class="{ invalid: !phone.isValid }"
+        @blur="clearValidity('phone')"
+        type="number"
+        id="phone"
+        required
+        name="phone"
+        v-model="phone.val"
+        placeholder="Téléphone"
       />
       <div class="checkbox-wrapper">
         <label class="checkbox" for="yes">
@@ -107,6 +117,10 @@ export default {
         isValid: true,
       },
       email: {
+        val: "",
+        isValid: true,
+      },
+      phone: {
         val: "",
         isValid: true,
       },
