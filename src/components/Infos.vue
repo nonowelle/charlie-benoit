@@ -39,9 +39,8 @@
           >
         </li>
       </ul>
+      <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
     </div>
-
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
   </div>
 </template>
 

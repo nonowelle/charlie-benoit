@@ -8,15 +8,11 @@
             <a href="#mariage" v-smooth-scroll class="nav-link">Le mariage</a>
           </li>
           <li class="nav-item">
-            <a href="#hebergement" v-smooth-scroll class="nav-link"
+            <a href="#hebergement-wrapper" v-smooth-scroll class="nav-link"
               >Hébergement</a
             >
           </li>
-          <li class="nav-item">
-            <a href="#informations" v-smooth-scroll class="nav-link"
-              >Infos utiles</a
-            >
-          </li>
+
           <li class="nav-item">
             <a href="#rsvp" v-smooth-scroll class="button small dark invert"
               >RSVP</a

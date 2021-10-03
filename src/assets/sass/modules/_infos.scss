@@ -8,8 +8,9 @@
   &-hebergement {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    min-height: 80vh;
   }
 
   &-par {
@@ -20,7 +21,7 @@
 
   .liste-hotels {
     max-width: 650px;
-    margin: 30px 60px;
+    margin: 30px 60px 130px 60px;
 
     li {
       margin: 10px;

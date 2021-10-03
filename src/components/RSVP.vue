@@ -50,49 +50,46 @@
           placeholder="Nom"
         />
       </div>
-      <input
-        :class="{ invalid: !email.isValid }"
-        @blur="clearValidity('email')"
-        type="text"
-        id="email"
-        required
-        name="email"
-        v-model="email.val"
-        placeholder="Courriel"
-      />
-      <input
-        :class="{ invalid: !phone.isValid }"
-        @blur="clearValidity('phone')"
-        type="number"
-        id="phone"
-        required
-        name="phone"
-        v-model="phone.val"
-        placeholder="Téléphone"
-      />
-      <div class="checkbox-wrapper">
-        <label class="checkbox" for="yes">
-          <input
-            @blur="clearValidity('response')"
-            type="checkbox"
-            id="yes"
-            v-model="response.val"
-            :class="{ invalid: !response.isValid }"
-          />
+
+      <div class="input-wrapper">
+        <input
+          :class="{ invalid: !email.isValid }"
+          @blur="clearValidity('email')"
+          type="text"
+          id="email"
+          required
+          name="email"
+          v-model="email.val"
+          placeholder="Courriel"
+        />
+      </div>
+
+      <div class="input-wrapper">
+        <input
+          :class="{ invalid: !phone.isValid }"
+          @blur="clearValidity('phone')"
+          type="text"
+          id="phone"
+          required
+          name="phone"
+          v-model="phone.val"
+          placeholder="Téléphone"
+        />
+      </div>
+
+      <div class="radio-wrapper">
+        <label class="radio-label" for="yes">
+          <input type="radio" id="yes" value="Yes" v-model="picked.val" />
           <span>J'y serai</span>
         </label>
-        <label class="checkbox" for="no">
-          <input
-            type="checkbox"
-            id="no"
-            v-model="responseNo.val"
-            :class="{ invalid: !responseNo.isValid }"
-          />
+        <label class="radio-label" for="no">
+          <input type="radio" id="no" value="No" v-model="picked.val" />
           <span>Je ne pourrai y être</span>
         </label>
-        <p v-if="!firstName.isValid">
-          Vous devez selectionner une option
-        </p>
+      </div>
+
+      <div class="invalid-response" v-if="picked.val === ''">
+        <p>Vous devez sélectionner une option</p>
       </div>
 
       <button class="button large dark">
@@ -124,11 +121,9 @@ export default {
         val: "",
         isValid: true,
       },
-      response: {
+      picked: {
         val: "",
-      },
-      responseNo: {
-        val: "",
+        isValid: true,
       },
     };
   },
@@ -150,8 +145,8 @@ export default {
         this.email.isValid = false;
         this.formIsValid = false;
       }
-      if (!this.response.val === "") {
-        this.response.isValid = false;
+      if (this.phone.val === "") {
+        this.phone.isValid = false;
         this.formIsValid = false;
       }
     },
@@ -164,8 +159,6 @@ export default {
         first: this.firstName,
         last: this.lastName,
         email: this.email,
-        response: this.response,
-        responseNo: this.responseNo,
       };
       console.log(formData);
     },
