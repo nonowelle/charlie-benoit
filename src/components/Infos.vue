@@ -24,7 +24,11 @@
         >
       </li>
     </ul>
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
+    <i
+      class="arrow fas fa-angle-down"
+      v-smooth-scroll
+      href="#hebergement-wrapper"
+    ></i>
   </div>
 </template>
 

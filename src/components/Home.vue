@@ -1,13 +1,13 @@
 <template>
-  <div id="home">
-    <Nav />
-    <Header />
-    <Mariage />
-    <Infos />
-    <Hebergement />
-    <RSVP />
-
-    <!-- <router-view></router-view> -->
+  <div>
+    <div id="home">
+      <Nav />
+      <Header />
+      <Mariage />
+      <Infos />
+      <Hebergement />
+      <RSVP />
+    </div>
   </div>
 </template>
 
@@ -30,6 +30,11 @@ export default {
     RSVP,
     Infos,
     Hebergement,
+  },
+  data() {
+    return {
+      isLoading: true,
+    };
   },
 };
 </script>
