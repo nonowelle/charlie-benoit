@@ -113,16 +113,20 @@
       </div>
     </form>
     <div v-if="formSubmitted" class="submitted">
-      <h3>
+      <h3 v-if="isGoing">
+        Nous avons tres hate de vous voir!
+      </h3>
+      <h3 v-else>
         Merci d'avoir envoyé votre réponse!
       </h3>
+
       <p>N'hésitez pas à nous contacter si vous avez des questions.</p>
       <div class="contact">
         <p>charlieduret@gmail.com</p>
         <p>514-708-2179</p>
       </div>
       <div class="contact">
-        <p>benoit???@gmail.com</p>
+        <p>benoit.billette@hotmail.com</p>
         <p>514-804-1872</p>
       </div>
     </div>
@@ -134,6 +138,8 @@ export default {
   name: "RSVP",
   data() {
     return {
+      isGoing: false,
+
       dialogOpen: false,
       formSubmitted: false,
       formIsValid: true,
@@ -207,8 +213,6 @@ export default {
         response: this.picked.val,
       };
 
-      console.log(formData);
-
       const data = formData;
       const options = {
         method: "POST",
@@ -218,7 +222,16 @@ export default {
         body: JSON.stringify(data),
       };
 
-      fetch("http://localhost:8080/confirmations", options);
+      fetch("http://localhost:8080/confirmations", options)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data.answer);
+          if (data.answer === "YES") {
+            this.isGoing = true;
+          }
+        });
 
       this.formSubmitted = true;
     },

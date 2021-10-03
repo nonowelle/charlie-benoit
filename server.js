@@ -13,10 +13,10 @@ app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:8081");
 
   // Request methods you wish to allow
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  // );
 
   // Request headers you wish to allow
   res.setHeader(
@@ -93,9 +93,12 @@ app.post("/confirmations", (req, res) => {
   };
 
   request(options, function(error, response, body) {
-    if (error) throw new Error(error);
-
-    console.log(body);
+    if (error) {
+      throw new Error(error);
+    } else {
+      console.log(response.body);
+      res.send(JSON.stringify(response.body));
+    }
   });
 });
 

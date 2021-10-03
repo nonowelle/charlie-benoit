@@ -73,8 +73,6 @@ export default {
         .then((response) => {
           const resultats = response.json();
           return resultats;
-          //mettre la logique ici pour extraire les donn/es a afficher comme uneliste
-          //arrannger les check boxes et mettre une fonction post dans le formulaire
         })
         .then((data) => {
           console.log(data);
