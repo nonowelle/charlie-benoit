@@ -1,3 +1,14 @@
+.confirmations-wrapper {
+  background-color: white;
+  border: 1px solid $light-grey;
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  &:first-of-type {
+    margin-top: 20px;
+  }
+}
+
 .confirmations-list {
   min-height: 100vh;
   padding: 120px 30px;
@@ -7,6 +18,7 @@
   }
   h3 {
     margin-top: 0;
+    text-align: left;
   }
 
   .attending,
@@ -22,8 +34,17 @@
   .confirmation {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style-type: circle;
+    .personne {
+      margin: 5px;
+      align-items: flex-start;
+    }
+    p {
+      line-height: 2rem;
+    }
   }
 
   .fullname {
@@ -33,5 +54,40 @@
 
   .courriel {
     font-size: 18px;
+  }
+
+  .back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+    .back-link {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $dark-blue;
+      text-decoration: none;
+    }
+
+    .arrow-left {
+      font-size: 1.1rem;
+      margin: 3px 15px 0 0;
+
+      animation: slide-left 4s ease-in-out;
+      animation-iteration-count: infinite;
+      @keyframes slide-left {
+        0% {
+          transform: translateX(4px);
+        }
+        50% {
+          transform: translateX(-4px);
+        }
+
+        100% {
+          transform: translateX(4px);
+        }
+      }
+    }
   }
 }

@@ -81,6 +81,7 @@ h4 {
   cursor: pointer;
   animation: slide 4s ease-in-out;
   animation-iteration-count: infinite;
+
   @keyframes slide {
     0% {
       transform: translateY(8px);
@@ -91,6 +92,23 @@ h4 {
 
     100% {
       transform: translateY(8px);
+    }
+  }
+
+  .arrow-left {
+    animation: slide-left 4s ease-in-out;
+    animation-iteration-count: infinite;
+    @keyframes slide-left {
+      0% {
+        transform: translateX(8px);
+      }
+      50% {
+        transform: translateX(-8px);
+      }
+
+      100% {
+        transform: translateX(8px);
+      }
     }
   }
 }

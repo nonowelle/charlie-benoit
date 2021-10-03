@@ -9,6 +9,12 @@
       <h3>Invités ayant refusé l'invitation</h3>
       <confirmation-item></confirmation-item>
     </div>
+    <div class="back">
+      <router-link to="/" class="back-link">
+        <i class="fas fa-angle-left arrow-left"></i>
+        Retour à la page d'accueil
+      </router-link>
+    </div>
   </div>
 </template>
 

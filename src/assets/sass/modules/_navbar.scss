@@ -5,12 +5,12 @@
   width: 100vw;
   background-color: $background-light;
   padding: 0 50px;
+  li {
+    // list-style: circle;
+    margin: 20px;
+  }
 }
 
-li {
-  list-style: none;
-  margin: 10px auto;
-}
 ul {
   margin: 0;
 }

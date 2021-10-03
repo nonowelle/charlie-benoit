@@ -1,10 +1,16 @@
 <template>
   <div>
-    <div v-for="person in result" :key="person._id" class="confirmation">
-      {{ person.firstName }}
-      {{ person.lastName }}
-      {{ person.email }}
-    </div>
+    <ol
+      v-for="(person, index) in result"
+      :key="person._id"
+      class="confirmation confirmations-wrapper"
+    >
+      <li class="personne ">
+        {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
+        {{ person.email }}
+        {{ person.phone }}
+      </li>
+    </ol>
   </div>
 </template>
 
