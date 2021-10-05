@@ -9,7 +9,7 @@
         <h3>Invités ayant accepté l'invitation</h3>
         <div>
           <ol
-            v-for="(person, index) in result"
+            v-for="(person, index) in attendingInvites"
             :key="person._id"
             class="confirmation confirmations-wrapper"
           >
@@ -19,7 +19,6 @@
               </p>
               <p>{{ person.email }}</p>
               <p>{{ person.phone }}</p>
-              <p>{{ person.answer }}</p>
             </li>
           </ol>
         </div>
@@ -28,7 +27,7 @@
         <h3>Invités ayant refusé l'invitation</h3>
         <div>
           <ol
-            v-for="(person, index) in result"
+            v-for="(person, index) in notAttending"
             :key="person._id"
             class="confirmation confirmations-wrapper"
           >
@@ -36,7 +35,6 @@
               {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
               {{ person.email }}
               {{ person.phone }}
-              {{ person.answer }}
             </li>
           </ol>
         </div>
@@ -62,12 +60,23 @@ export default {
 
   data() {
     return {
+      attendingInvites: [],
+      notAttending: [],
       result: [],
       responseAvailable: false,
       isLoading: false,
     };
   },
   methods: {
+    filterConfirmationsByChoice() {
+      const invitesAttending = this.result.filter((person) => {
+        return person.answer == "Yes";
+      });
+      this.attendingInvites = invitesAttending;
+      this.notAttending = this.result.filter((person) => {
+        return person.answer == "No";
+      });
+    },
     loadConfirmations() {
       this.isLoading = true;
 
@@ -77,7 +86,6 @@ export default {
           return resultats;
         })
         .then((data) => {
-          console.log(data);
           for (let person of data) {
             const email = person.email;
             const firstName = person.firstName;
@@ -91,10 +99,10 @@ export default {
             invite.lastName = lastName;
             invite.answer = answer;
             invite.phone = phone;
-            console.log(invite);
 
             this.result.push(invite);
           }
+          this.filterConfirmationsByChoice();
         })
         .catch(function(error) {
           console.log(error.message);
@@ -102,7 +110,6 @@ export default {
       this.isLoading = false;
     },
   },
-  filterConfirmationsByChoice() {},
 
   created() {
     this.loadConfirmations();
