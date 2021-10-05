@@ -2,7 +2,7 @@
   background-color: white;
   border: 1px solid $light-grey;
   margin-top: 10px;
-  padding: 5px 20px;
+  padding: 5px;
   border-radius: 4px;
   &:first-of-type {
     margin-top: 20px;
@@ -21,6 +21,15 @@
     text-align: left;
   }
 
+  p {
+    display: inline;
+    margin-right: 25px;
+  }
+
+  li {
+    max-width: none;
+  }
+
   .attending,
   .not-attending {
     background-color: transparent;
@@ -29,22 +38,6 @@
     border-radius: 4px;
     margin: 30px auto;
     padding: 30px;
-  }
-
-  .confirmation {
-    display: flex;
-    flex-direction: row;
-
-    align-items: flex-start;
-    justify-content: flex-start;
-    list-style-type: circle;
-    .personne {
-      margin: 5px;
-      align-items: flex-start;
-    }
-    p {
-      line-height: 2rem;
-    }
   }
 
   .fullname {

@@ -14,10 +14,12 @@
             class="confirmation confirmations-wrapper"
           >
             <li class="personne" v-if="person.answer === 'Yes'">
-              {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
-              {{ person.email }}
-              {{ person.phone }}
-              {{ person.answer }}
+              <p>
+                {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
+              </p>
+              <p>{{ person.email }}</p>
+              <p>{{ person.phone }}</p>
+              <p>{{ person.answer }}</p>
             </li>
           </ol>
         </div>
@@ -100,6 +102,7 @@ export default {
       this.isLoading = false;
     },
   },
+  filterConfirmationsByChoice() {},
 
   created() {
     this.loadConfirmations();
