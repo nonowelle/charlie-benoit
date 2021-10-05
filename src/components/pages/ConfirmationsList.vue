@@ -32,9 +32,11 @@
             class="confirmation confirmations-wrapper"
           >
             <li class="personne" v-if="person.answer === 'No'">
-              {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
-              {{ person.email }}
-              {{ person.phone }}
+              <p>
+                {{ index + 1 }} - {{ person.firstName }} {{ person.lastName }}
+              </p>
+              <p>{{ person.email }}</p>
+              <p>{{ person.phone }}</p>
             </li>
           </ol>
         </div>
