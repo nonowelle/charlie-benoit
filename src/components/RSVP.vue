@@ -165,6 +165,7 @@ export default {
       },
     };
   },
+
   methods: {
     openDialog() {
       this.dialogOpen = true;
@@ -175,6 +176,7 @@ export default {
     clearValidity(input) {
       this[input].isValid = true;
     },
+
     validateForm() {
       this.dialogOpen = false;
       this.formIsValid = true;
@@ -190,6 +192,7 @@ export default {
         this.email.isValid = false;
         this.formIsValid = false;
       }
+
       if (this.phone.val === "") {
         this.phone.isValid = false;
         this.formIsValid = false;
@@ -203,6 +206,7 @@ export default {
       this.validateForm();
 
       if (!this.formIsValid) {
+        alert("NOT VALID");
         return;
       }
       const formData = {

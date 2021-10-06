@@ -6,10 +6,11 @@ import Axios from "axios";
 
 import "@/assets/sass/_styles.scss";
 import VueSmoothScroll from "vue2-smooth-scroll";
-
+import validator from "validator";
 Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+Vue.use(validator);
 
 Axios.defaults.withCredentials = false;
 Vue.prototype.$axios = Axios;

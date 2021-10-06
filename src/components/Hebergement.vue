@@ -31,11 +31,6 @@
         <img class="jpeg" src="../assets/manoir.jpeg" />
       </div>
     </div>
-    <i
-      class="arrow fas fa-angle-down"
-      v-smooth-scroll
-      href="#hebergement-2"
-    ></i>
 
     <div class="hebergement-2 " id="hebergement-2">
       <div class="hebergement-photo">
