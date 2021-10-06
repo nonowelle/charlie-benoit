@@ -10,6 +10,9 @@
 }
 .hebergement {
   padding-bottom: 80px;
+  @media (max-width: 770px) {
+    padding-bottom: 0;
+  }
 }
 
 .hebergement,
@@ -19,6 +22,10 @@
   justify-content: center;
   align-items: center;
   // min-height: 80vh;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
   h3 {
     margin-bottom: 30px;
   }
@@ -36,6 +43,11 @@
     width: 650px;
     margin-right: 60px;
     text-align: left;
+    @media (max-width: 770px) {
+      margin-right: 20px;
+      margin-left: 20px;
+      text-align: center;
+    }
   }
 
   &-desc {
@@ -65,6 +77,9 @@
     width: 500px;
     margin-left: 60px;
     margin-right: 60px;
+    @media (max-width: 770px) {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -74,6 +89,9 @@
     margin-right: 60px;
     margin-bottom: 60px;
     margin-left: 0;
+    @media (max-width: 770px) {
+      margin-left: 60px;
+    }
   }
 }
 
