@@ -100,7 +100,11 @@
           <span>Je ne pourrai y être</span>
         </label>
       </div>
-      <p :class="{ radioInvalid: !picked.isValid }" v-if="!picked.val">
+      <p
+        class="option"
+        :class="{ radioInvalid: !picked.isValid }"
+        v-if="!picked.val"
+      >
         Veuillez choisir une option.
       </p>
       <div>
