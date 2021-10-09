@@ -1,0 +1,147 @@
+#app {
+  font-family: "Kaisei HarunoUmi", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  overflow: hidden;
+}
+
+body {
+  background-color: $background-light;
+  color: $dark-blue;
+  font-family: "Kaisei HarunoUmi", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+//typography
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px;
+}
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #050776;
+  }
+
+  &:visited {
+    color: $dark-blue;
+
+    &:hover {
+      color: #050776;
+    }
+  }
+}
+
+h1 {
+  color: $dark-blue;
+  font-size: 65px;
+}
+h3 {
+  margin: 40px 0 0;
+  font-size: 28px;
+}
+h4 {
+  margin: 40px 0 15px 0;
+  font-size: 20px;
+}
+
+.jpeg {
+  border-radius: 8px;
+}
+
+//buttons
+
+.button {
+  background-color: $background-light;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 18px;
+  color: $dark-blue;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+
+  &.large {
+    width: 133px;
+
+    padding: 10px 25px;
+  }
+
+  &.small {
+    padding: 5px 20px;
+    margin: 0;
+  }
+
+  &.dark {
+    background-color: $dark-blue;
+    color: $background-light;
+
+    &.invert {
+      background-color: $background-light;
+      border: 1px solid $dark-blue;
+      color: $dark-blue;
+      transition: background-color, color 0.3s ease;
+    }
+    &:hover {
+      background-color: $dark-blue-hover;
+      color: $background-light;
+    }
+  }
+}
+
+.arrow {
+  margin-top: 30px;
+  font-size: 30px;
+  z-index: 0;
+  cursor: pointer;
+  animation: slide 4s ease-in-out;
+  animation-iteration-count: infinite;
+
+  @keyframes slide {
+    0% {
+      transform: translateY(8px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+
+    100% {
+      transform: translateY(8px);
+    }
+  }
+}
+
+.footer {
+  display: flex;
+
+  padding: 40px 0;
+  font-size: 0.8rem;
+  background-color: $header-border;
+  color: $dark-blue;
+  width: 100%;
+  a {
+    margin: 0 auto;
+  }
+}

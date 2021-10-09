@@ -1,0 +1,86 @@
+.confirmations-wrapper {
+  background-color: white;
+  border: 1px solid $light-grey;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  &:first-of-type {
+    margin-top: 20px;
+  }
+}
+
+.confirmations-list {
+  min-height: 100vh;
+  padding: 120px 30px;
+
+  h1 {
+    font-size: 45px;
+  }
+  h3 {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  p {
+    display: inline;
+    margin-right: 25px;
+  }
+
+  li {
+    max-width: none;
+  }
+
+  .attending,
+  .not-attending {
+    background-color: transparent;
+    border: 1px solid $dark-blue;
+    max-width: 700px;
+    border-radius: 4px;
+    margin: 30px auto;
+    padding: 30px;
+  }
+
+  .fullname {
+    font-size: 18px;
+    margin-right: 150px;
+  }
+
+  .courriel {
+    font-size: 18px;
+  }
+
+  .back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+    .back-link {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $dark-blue;
+      text-decoration: none;
+    }
+
+    .arrow-left {
+      font-size: 1.1rem;
+      margin: 3px 15px 0 0;
+
+      animation: slide-left 4s ease-in-out;
+      animation-iteration-count: infinite;
+      @keyframes slide-left {
+        0% {
+          transform: translateX(4px);
+        }
+        50% {
+          transform: translateX(-4px);
+        }
+
+        100% {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+}
