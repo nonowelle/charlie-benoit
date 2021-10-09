@@ -33,9 +33,11 @@
 
       <h3>Répondre à l'invitation</h3>
       <div class="avertissement">
-        Les places au mariage étant limitées, nous vous demandons d'être certain
-        de votre réponse avec de confirmer votre présence. Merci de votre
-        compréhension!
+        <p>
+          Les places au mariage étant limitées, nous vous demandons d'être
+          certain de votre réponse avec de confirmer votre présence. Merci de
+          votre compréhension!
+        </p>
       </div>
 
       <div class="name-wrapper">
