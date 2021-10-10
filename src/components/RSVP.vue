@@ -184,6 +184,7 @@ export default {
     },
 
     validateForm() {
+      const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       this.dialogOpen = false;
       this.formIsValid = true;
       if (this.firstName.val === "") {
@@ -194,7 +195,7 @@ export default {
         this.lastName.isValid = false;
         this.formIsValid = false;
       }
-      if (this.email.val === "") {
+      if (!this.email.val.match(validRegex)) {
         this.email.isValid = false;
         this.formIsValid = false;
       }
