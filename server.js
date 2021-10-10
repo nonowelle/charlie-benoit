@@ -36,10 +36,6 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-// app.get(/.*/, function(req, res) {
-//   res.sendFile(__dirname + "/dist/index.html");
-// });
-
 app.get("/confirmations", (_req, res) => {
   let config = {
     method: "get",
@@ -53,7 +49,6 @@ app.get("/confirmations", (_req, res) => {
   axios(config)
     .then((response) => {
       console.log("IN THE RESPONSE");
-      res.sendFile(__dirname + "/dist/index.html");
 
       res.send(response.data);
 
@@ -102,6 +97,10 @@ app.post("/confirmations", (req, res) => {
       res.send(JSON.stringify(response.body));
     }
   });
+});
+
+app.get(/.*/, function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
 });
 
 // Make the app listen to a port
