@@ -36,7 +36,11 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-app.get("/confirmations", (_req, res) => {
+// app.get(/.*/, function(req, res) {
+//   res.sendFile(__dirname + "/dist/index.html");
+// });
+
+app.get(/.*/, (_req, res) => {
   let config = {
     method: "get",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
@@ -53,6 +57,7 @@ app.get("/confirmations", (_req, res) => {
       res.send(response.data);
 
       res.send(JSON.stringify(response.data));
+      res.sendFile(__dirname + "/dist/index.html");
     })
     .catch(function(error) {
       console.log(error.message);
@@ -97,10 +102,6 @@ app.post("/confirmations", (req, res) => {
       res.send(JSON.stringify(response.body));
     }
   });
-});
-
-app.get(/.*/, function(req, res) {
-  res.sendFile(__dirname + "/dist/index.html");
 });
 
 // Make the app listen to a port
