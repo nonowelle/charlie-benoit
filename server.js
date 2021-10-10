@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 app.use("/", serveStatic(path.join(__dirname + "/dist")));
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:8081");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://mariage-charlie-benoit-2021.herokuapp.com/"
+  );
 
   // Request headers you wish to allow
   res.setHeader(
