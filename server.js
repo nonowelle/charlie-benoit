@@ -36,9 +36,9 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-app.get(/.*/, function(req, res) {
-  res.sendFile(__dirname + "/dist/index.html");
-});
+// app.get(/.*/, function(req, res) {
+//   res.sendFile(__dirname + "/dist/index.html");
+// });
 
 app.get("/confirmations", (_req, res) => {
   let config = {
@@ -53,6 +53,7 @@ app.get("/confirmations", (_req, res) => {
   axios(config)
     .then((response) => {
       console.log("IN THE RESPONSE");
+      res.sendFile(__dirname + "/dist/index.html");
 
       res.send(response.data);
 
