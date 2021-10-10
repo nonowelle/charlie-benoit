@@ -44,9 +44,13 @@
     align-items: center;
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 60px;
     h3 {
       margin-top: 150px;
       margin-bottom: 30px;
+      @media (max-width: 770px) {
+        margin-top: 20px;
+      }
     }
     .contact {
       margin-top: 50px;
