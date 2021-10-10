@@ -1,8 +1,5 @@
 <template>
   <div class="">
-    <div v-if="isLoading">
-      <Loader />
-    </div>
     <div v-if="!isLoading" class="confirmations-list">
       <h1>Confirmations</h1>
       <div class="attending">
@@ -52,13 +49,8 @@
 </template>
 
 <script>
-import Loader from "../Loader.vue";
-
 export default {
   name: "ConfirmationsList",
-  components: {
-    Loader,
-  },
 
   data() {
     return {
