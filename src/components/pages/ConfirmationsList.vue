@@ -74,7 +74,7 @@ export default {
     loadConfirmations() {
       this.isLoading = true;
 
-      fetch("http://localhost:8080/confirmations")
+      fetch("confirmations")
         .then((response) => {
           const resultats = response.json();
           return resultats;
