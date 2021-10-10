@@ -3,12 +3,14 @@ const app = express();
 const port = process.env.PORT || 8080;
 const axios = require("axios");
 const bodyParser = require("body-parser");
+const serveStatic = require("serve-static");
+const path = require("path");
 // const { construct } = require("core-js/fn/reflect");
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use("/static", express.static(__dirname + "/../build"));
+app.use("/", serveStatic(path.join(__dirname + "/dist")));
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:8081");
