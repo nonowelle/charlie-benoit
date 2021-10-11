@@ -9,6 +9,7 @@
       <p class="date">28/05/2022 | Manoir Stonehaven</p>
 
       <a class="button large" v-smooth-scroll href="#rsvp">RSVP</a>
+      <p class="lieu">Confirmez votre présence avant le <b>1er décembre </b></p>
       <i class="arrow fas fa-angle-down" v-smooth-scroll href="#mariage"></i>
     </div>
   </div>
