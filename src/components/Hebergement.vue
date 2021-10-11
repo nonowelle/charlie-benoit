@@ -40,7 +40,8 @@
         <h3>Réservations</h3>
         <p>
           Réservez votre chambre rapidement en contactant le manoir au
-          <b>819-774-1991</b>. Seulement <b>34</b> chambres sont disponibles.
+          <b>819-774-1991</b>. Seulement <b>34</b> chambres sont disponibles au
+          total.
         </p>
         <p>
           *Nous prioriserons les personnes désirant passer la fin de semaine au

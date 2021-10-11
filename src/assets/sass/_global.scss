@@ -26,6 +26,9 @@ body {
 p {
   font-size: 1.2rem;
   line-height: 2rem;
+  @media (max-width: 770px) {
+    font-size: 1rem;
+  }
 }
 
 ul {

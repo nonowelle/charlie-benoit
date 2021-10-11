@@ -34,9 +34,15 @@
       <h3>Répondre à l'invitation</h3>
       <div class="avertissement">
         <p>
-          Les places au mariage étant limitées, nous vous demandons d'être
-          certain de votre réponse avec de confirmer votre présence. Merci de
-          votre compréhension!
+          Les places au mariage étant limitées, nous vous demandons
+          <b> d'être certain </b> de votre réponse avec de confirmer votre
+          présence. Merci de votre compréhension!
+        </p>
+        <p class="important">
+          <b>
+            Important : chaque personne dont le nom est inscrit sur l'enveloppe
+            d'invitation doit remplir le formulaire.</b
+          >
         </p>
       </div>
 
