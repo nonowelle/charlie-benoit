@@ -126,7 +126,7 @@
     </form>
     <div v-if="formSubmitted" class="submitted">
       <h3 v-if="isGoing">
-        Nous avons tres hate de vous voir!
+        Nous avons très hate de vous voir!
       </h3>
       <h3 v-else>
         Merci d'avoir envoyé votre réponse!
@@ -246,8 +246,9 @@ export default {
         })
         .then((data) => {
           console.log(data.answer);
-          if (data.answer === "YES") {
+          if (data.answer === "Yes") {
             this.isGoing = true;
+            console.log("ISGOING");
           }
         });
 
