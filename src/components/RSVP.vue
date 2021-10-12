@@ -240,7 +240,7 @@ export default {
         body: JSON.stringify(formData),
       };
 
-      fetch("/confirmations", options)
+      fetch("/api/confirmations", options)
         .then((response) => {
           return response.json();
         })

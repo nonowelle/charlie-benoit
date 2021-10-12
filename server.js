@@ -72,7 +72,7 @@ app.get("/confirmations", (_req, res) => {
     });
 });
 
-app.post("/confirmations", (req, res) => {
+app.post("/api/confirmations", (req, res) => {
   const answer = {
     lastName: req.body.lastName,
     firstName: req.body.firstName,
