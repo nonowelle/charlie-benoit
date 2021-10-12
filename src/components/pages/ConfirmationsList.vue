@@ -77,6 +77,7 @@ export default {
       fetch("/confirmations")
         .then((response) => {
           const resultats = response.json();
+          console.log(response);
           return resultats;
         })
         .then((data) => {

@@ -5,13 +5,14 @@ const axios = require("axios");
 const bodyParser = require("body-parser");
 const serveStatic = require("serve-static");
 const path = require("path");
+
 // const { construct } = require("core-js/fn/reflect");
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use("/", serveStatic(path.join(__dirname + "/dist")));
-// app.use(cors());
+// app.use("/", serveStatic(path.join(__dirname + "/dist")));
+
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -19,7 +20,7 @@ app.use(function(req, res, next) {
   // Request headers you wish to allow
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With,content-type, Accept, Authorization"
+    "Origin, X-Requested-With,content-type, Accept"
   );
 
   // Set to true if you need the website to include cookies in the requests sent
@@ -37,16 +38,17 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-app.get(/.*/, function(req, res) {
-  res.sendFile(__dirname + "/dist/index.html");
-});
+// app.get(/.*/, function(req, res) {
+//   res.sendFile(__dirname + "/dist/index.html");
+// });
 
 app.get("/confirmations", (_req, res) => {
   let config = {
-    method: "get",
+    method: "GET",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
     headers: {
       "x-apikey": api_key,
+      "cache-control": "no-cache",
       "Content-Type": "application/json",
     },
   };
@@ -60,7 +62,8 @@ app.get("/confirmations", (_req, res) => {
       res.send(JSON.stringify(response.data));
     })
     .catch(function(error) {
-      console.log(error.message);
+      // console.log(error.message);
+      console.log(error);
     });
 });
 
@@ -81,7 +84,7 @@ app.post("/confirmations", (req, res) => {
     url: "https://confirmations-1a40.restdb.io/rest/invites",
     headers: {
       "cache-control": "no-cache",
-      "x-apikey": "1cafe281210a9ab5837d477312051f4143e0c",
+      "x-apikey": api_key,
       "content-type": "application/json",
     },
     body: {
