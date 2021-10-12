@@ -14,12 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/", serveStatic(path.join(__dirname + "/dist")));
 
-app.use(
-  history({
-    disableDotRule: true,
-    verbose: true,
-  })
-);
+// app.use(
+//   history({
+//     disableDotRule: true,
+//     verbose: true,
+//   })
+// );
 
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
@@ -45,10 +45,6 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const api_key = process.env.API_KEY;
-
-// app.get(/.*/, function(req, res) {
-//   res.sendFile(__dirname + "/dist/index.html");
-// });
 
 app.get("/api/confirmations", (_req, res) => {
   let config = {
@@ -113,6 +109,10 @@ app.post("/confirmations", (req, res) => {
       res.send(JSON.stringify(response.body));
     }
   });
+});
+
+app.get(/.*/, function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
 });
 
 // Make the app listen to a port
