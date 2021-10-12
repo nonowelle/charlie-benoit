@@ -38,9 +38,9 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-// app.get(/.*/, function(req, res) {
-//   res.sendFile(__dirname + "/dist/index.html");
-// });
+app.get(/.*/, function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
+});
 
 app.get("/confirmations", (_req, res) => {
   let config = {
