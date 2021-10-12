@@ -241,7 +241,7 @@ export default {
         body: JSON.stringify(data),
       };
 
-      fetch("http://localhost:8080/confirmations", options)
+      fetch("/api/confirmations", options)
         .then((response) => {
           return response.json();
         })
