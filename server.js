@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const serveStatic = require("serve-static");
 const path = require("path");
 const history = require("connect-history-api-fallback");
+const request = require("request");
 
 // const { construct } = require("core-js/fn/reflect");
 
@@ -46,7 +47,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-app.get("/api/confirmations", (_req, res) => {
+app.get("/confirmations", (_req, res) => {
   let config = {
     method: "GET",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
@@ -71,19 +72,16 @@ app.get("/api/confirmations", (_req, res) => {
     });
 });
 
-app.post("/api/confirmations", (req, res) => {
-  console.log(req.body);
+app.post("/confirmations", (req, res) => {
   const answer = {
-    lastName: req.body.last,
-    firstName: req.body.first,
+    lastName: req.body.lastName,
+    firstName: req.body.firstName,
     email: req.body.email,
     phone: req.body.phone,
     answer: req.body.response,
   };
-  console.log(answer);
-  var request = require("request");
 
-  var options = {
+  let options = {
     method: "POST",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
     headers: {
@@ -92,13 +90,8 @@ app.post("/api/confirmations", (req, res) => {
       "content-type": "application/json",
       Accept: "application/json",
     },
-    body: {
-      lastName: req.body.last,
-      firstName: req.body.first,
-      email: req.body.email,
-      phone: req.body.phone,
-      answer: req.body.response,
-    },
+    body: answer,
+
     json: true,
   };
 
