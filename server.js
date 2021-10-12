@@ -100,6 +100,10 @@ app.post("/confirmations", (req, res) => {
   });
 });
 
+app.get(/.*/, function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
+});
+
 // Make the app listen to a port
 app.listen(port, () => {
   console.log(`listening at ${port}`);
