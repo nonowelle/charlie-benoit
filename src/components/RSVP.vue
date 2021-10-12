@@ -251,6 +251,9 @@ export default {
             this.isGoing = true;
             console.log("ISGOING");
           }
+        })
+        .catch(function(error) {
+          alert(error.message);
         });
 
       this.formSubmitted = true;
