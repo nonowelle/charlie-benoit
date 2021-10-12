@@ -90,6 +90,7 @@ app.post("/api/confirmations", (req, res) => {
       "cache-control": "no-cache",
       "x-apikey": api_key,
       "content-type": "application/json",
+      Accept: "application/json",
     },
     body: {
       lastName: req.body.last,
