@@ -63,8 +63,8 @@ app.get("/confirmations", (_req, res) => {
 app.post("/confirmations", (req, res) => {
   console.log(req.body);
   const answer = {
-    lastName: req.body.last,
-    firstName: req.body.first,
+    lastName: req.body.lastName,
+    firstName: req.body.firstName,
     email: req.body.email,
     phone: req.body.phone,
     answer: req.body.response,
@@ -80,13 +80,7 @@ app.post("/confirmations", (req, res) => {
       "x-apikey": "1cafe281210a9ab5837d477312051f4143e0c",
       "content-type": "application/json",
     },
-    body: {
-      lastName: req.body.last,
-      firstName: req.body.first,
-      email: req.body.email,
-      phone: req.body.phone,
-      answer: req.body.response,
-    },
+    body: answer,
     json: true,
   };
 

@@ -224,23 +224,22 @@ export default {
         return;
       }
       const formData = {
-        first: this.firstName.val,
-        last: this.lastName.val,
+        firstName: this.firstName.val,
+        lastName: this.lastName.val,
         email: this.email.val,
         phone: this.phone.val,
-        response: this.picked.val,
+        answer: this.picked.val,
       };
 
-      const data = formData;
       const options = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       };
 
-      fetch("http://localhost:8080/confirmations", options)
+      fetch("/confirmations", options)
         .then((response) => {
           return response.json();
         })
