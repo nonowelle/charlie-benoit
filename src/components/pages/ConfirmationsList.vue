@@ -74,9 +74,9 @@ export default {
     loadConfirmations() {
       this.isLoading = true;
 
-      fetch("confirmations")
-        .then((response) => {
-          const resultats = response.json();
+      fetch("/confirmations")
+        .then(async (response) => {
+          const resultats = await response.json();
           return resultats;
         })
         .then((data) => {
