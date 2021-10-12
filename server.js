@@ -47,7 +47,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const api_key = process.env.API_KEY;
 
-app.get("/confirmations", (_req, res) => {
+app.get("/api/confirmations", (_req, res) => {
   let config = {
     method: "GET",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
