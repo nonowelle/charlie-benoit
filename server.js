@@ -14,12 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/", serveStatic(path.join(__dirname + "/dist")));
 
-// app.use(
-//   history({
-//     disableDotRule: true,
-//     verbose: true,
-//   })
-// );
+app.use(
+  history({
+    disableDotRule: true,
+    verbose: true,
+  })
+);
 
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
