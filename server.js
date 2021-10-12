@@ -51,7 +51,7 @@ app.get("/api/confirmations", (_req, res) => {
     method: "GET",
     url: "https://confirmations-1a40.restdb.io/rest/invites",
     headers: {
-      "x-apikey": api_key,
+      "x-apikey": "1cafe281210a9ab5837d477312051f4143e0c",
       "cache-control": "no-cache",
       "Content-Type": "application/json",
     },
