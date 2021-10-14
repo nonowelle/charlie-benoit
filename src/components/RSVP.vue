@@ -239,7 +239,7 @@ export default {
         body: JSON.stringify(formData),
       };
 
-      fetch("/confirmations", options)
+      fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
         .then((response) => {
           return response.json();
         })
