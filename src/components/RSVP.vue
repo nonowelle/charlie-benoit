@@ -230,18 +230,28 @@ export default {
         phone: this.phone.val,
         answer: this.picked.val,
       };
+      // const params = new URLSearchParams();
+      // params.append("email", formData.email);
+      // params.append("firstName", formData.firstName);
+      // params.append("lastName", formData.lastName);
+      // params.append("phone", formData.phone);
+      // params.append("answer", formData.answer);
+
+      const formDataSent = JSON.stringify(formData);
 
       const options = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: formDataSent,
       };
 
       fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
-        .then((response) => {
-          return response.json();
+        .then(async (response) => {
+          const data = await response.json();
+          console.log(data);
+          return data;
         })
         .then((data) => {
           console.log(data.answer);
@@ -249,7 +259,8 @@ export default {
             this.isGoing = true;
             console.log("ISGOING");
           }
-        });
+        })
+        .catch((error) => console.log("error", error));
 
       this.formSubmitted = true;
     },
