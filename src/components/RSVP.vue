@@ -242,6 +242,7 @@ export default {
       const options = {
         method: "POST",
         headers: {
+          "Access-Control-Request-Method": "POST",
           "Content-Type": "application/json",
           origin: "http://www.mariagecharlieetbenoit.com/",
         },
