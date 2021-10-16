@@ -230,27 +230,36 @@ export default {
         phone: this.phone.val,
         answer: this.picked.val,
       };
+      console.log(this.firstName.val);
 
-      const formDataSent = JSON.stringify(formData);
+      // const formDataSent = JSON.stringify(formData);
+      // console.log(formDataSent);
+      const params = new URLSearchParams();
+      params.append("email", formData.email);
+      params.append("firstname", formData.firstName);
+      params.append("lastname", formData.lastName);
+      params.append("lastname", formData.answer);
 
       const options = {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Request-Method": "POST",
+          "Access-Control-Request-Headers": " Content-Type",
         },
-
-        body: formDataSent,
+        body: params,
       };
-
+      console.log(params.email);
       fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
         .then(async (response) => {
-          const data = await response.json();
-          console.log(data);
-          return data;
+          // const data = await JSON.parse(response);
+          console.log(response);
+          // return data;
+          return response;
         })
         .then((data) => {
-          console.log(data.answer);
+          console.log(data);
           if (data.answer === "Yes") {
             this.isGoing = true;
             console.log("ISGOING");
