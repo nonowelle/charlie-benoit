@@ -230,31 +230,31 @@ export default {
         phone: this.phone.val,
         answer: this.picked.val,
       };
-      console.log(this.firstName.val);
+      const formBody = Object.keys(formData)
+        .map(
+          (key) =>
+            encodeURIComponent(key) + "=" + encodeURIComponent(formData[key])
+        )
+        .join("&");
 
-      // const formDataSent = JSON.stringify(formData);
-      // console.log(formDataSent);
       const params = new URLSearchParams();
-      params.append("email", formData.email);
-      params.append("firstname", formData.firstName);
-      params.append("lastname", formData.lastName);
-      params.append("lastname", formData.answer);
-
+      params.append("firstName", formData.firstName);
+      console.log();
       const options = {
         method: "POST",
+        body: formBody,
         headers: {
-          //   "Content-Type": "application/json",
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Access-Control-Request-Method": "POST",
-          "Access-Control-Request-Headers": " Content-Type",
+          // "Access-Control-Request-Method": "POST",
+          // "Access-Control-Request-Headers": " Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         },
-        body: params,
       };
-      console.log(params.email);
-      fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
+      console.log(JSON.stringify(formData));
+
+      fetch("https://api-charlie.herokuapp.com/", options)
         .then(async (response) => {
           // const data = await JSON.parse(response);
-          console.log(response);
+          // const data = await response.json();
           // return data;
           return response;
         })
