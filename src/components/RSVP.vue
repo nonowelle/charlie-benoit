@@ -243,7 +243,9 @@ export default {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          origin: "http://www.mariagecharlieetbenoit.com/",
         },
+
         body: formDataSent,
       };
 
