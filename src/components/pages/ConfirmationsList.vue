@@ -75,11 +75,7 @@ export default {
       this.isLoading = true;
 
       fetch("https://api-charlie.herokuapp.com/api/confirmations")
-        .then(async (response) => {
-          // const resultats = await response.json();
-          return response;
-        })
-        .then((data) => {
+        .then(async (data) => {
           for (let person of data) {
             const email = person.email;
             const firstName = person.firstName;
