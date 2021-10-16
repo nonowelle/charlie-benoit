@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="navigation">
-      <nav class="navbar">
+      <nav class="navbar" v-click-outside="onClickOutside">
         <a href="#header" v-smooth-scroll class="nav-logo">B & C </a>
         <ul class="nav-menu" v-bind:class="{ active: isActive }">
           <li class="nav-item">
@@ -37,12 +37,34 @@
 </template>
 
 <script>
+import Vue from "vue";
+
+Vue.directive("click-outside", {
+  bind(el, binding, vnode) {
+    el.clickOutsideEvent = (event) => {
+      if (!(el === event.target || el.contains(event.target))) {
+        vnode.context[binding.expression](event);
+      }
+    };
+    document.body.addEventListener("click", el.clickOutsideEvent);
+  },
+  unbind(el) {
+    document.body.removeEventListener("click", el.clickOutsideEvent);
+  },
+});
 export default {
   name: "Nav",
   data() {
     return {
       isActive: false,
     };
+  },
+  methods: {
+    onClickOutside() {
+      if (this.isActive === true) {
+        this.isActive = !this.isActive;
+      }
+    },
   },
 };
 </script>
