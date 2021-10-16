@@ -251,7 +251,7 @@ export default {
       };
       console.log(JSON.stringify(formData));
 
-      fetch("https://api-charlie.herokuapp.com/", options)
+      fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
         .then(async (response) => {
           // const data = await JSON.parse(response);
           // const data = await response.json();
