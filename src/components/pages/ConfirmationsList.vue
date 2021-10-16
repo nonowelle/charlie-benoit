@@ -76,7 +76,7 @@ export default {
 
       fetch("https://api-charlie.herokuapp.com/api/confirmations")
         .then(async (response) => {
-          const resultats = await response.json();
+          const resultats = await JSON.parse(response);
           return resultats;
         })
         .then((data) => {
