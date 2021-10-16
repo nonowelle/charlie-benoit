@@ -230,12 +230,6 @@ export default {
         phone: this.phone.val,
         answer: this.picked.val,
       };
-      // const params = new URLSearchParams();
-      // params.append("email", formData.email);
-      // params.append("firstName", formData.firstName);
-      // params.append("lastName", formData.lastName);
-      // params.append("phone", formData.phone);
-      // params.append("answer", formData.answer);
 
       const formDataSent = JSON.stringify(formData);
 
@@ -244,7 +238,8 @@ export default {
         headers: {
           "Access-Control-Request-Method": "POST",
           "Content-Type": "application/json",
-          origin: "http://www.mariagecharlieetbenoit.com/",
+          "Access-Control-Allow-Origin":
+            "http://www.mariagecharlieetbenoit.com/",
         },
 
         body: formDataSent,
