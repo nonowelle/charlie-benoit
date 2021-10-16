@@ -220,7 +220,7 @@ export default {
       this.validateForm();
 
       if (!this.formIsValid) {
-        alert("NOT VALID");
+        console.log("Veuillez remplir tous les champs correctement.");
         return;
       }
       const formData = {
