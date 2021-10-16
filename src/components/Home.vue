@@ -7,7 +7,9 @@
 
       <Hebergement />
       <Infos />
+      <Contact />
       <RSVP />
+
       <Footer />
     </div>
   </div>
@@ -21,7 +23,7 @@ import Mariage from "./Mariage.vue";
 import Infos from "./Infos.vue";
 import Hebergement from "./Hebergement.vue";
 import Footer from "./Footer.vue";
-
+import Contact from "./Contact.vue";
 import RSVP from "./RSVP.vue";
 
 export default {
@@ -33,6 +35,7 @@ export default {
     RSVP,
     Infos,
     Hebergement,
+    Contact,
     Footer,
   },
   data() {

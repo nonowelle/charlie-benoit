@@ -12,6 +12,9 @@
               >Hébergement</a
             >
           </li>
+          <li class="nav-item">
+            <a href="#contact" v-smooth-scroll class="nav-link">Contact</a>
+          </li>
 
           <li class="nav-item">
             <a href="#rsvp" v-smooth-scroll class="button small dark invert"

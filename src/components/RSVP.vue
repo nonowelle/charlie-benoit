@@ -230,6 +230,7 @@ export default {
         phone: this.phone.val,
         answer: this.picked.val,
       };
+
       const formBody = Object.keys(formData)
         .map(
           (key) =>
@@ -253,9 +254,6 @@ export default {
 
       fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
         .then(async (response) => {
-          // const data = await JSON.parse(response);
-          // const data = await response.json();
-          // return data;
           return response;
         })
         .then((data) => {

@@ -1,0 +1,15 @@
+.contact-wrapper {
+  min-height: 400px;
+  background-color: $dark-blue;
+  color: $background-light;
+  padding: 80px 30px;
+
+  h3 {
+    margin: 40px 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+}
