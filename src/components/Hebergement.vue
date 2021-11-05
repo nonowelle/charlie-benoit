@@ -40,11 +40,7 @@
         <h3>Réservations</h3>
         <p>
           Toutes les chambres du manoir sont malheureusement déjà réservées.
-          Nous vous aviserons en cas d'annulation. <3
-        </p>
-        <p>
-          *Nous prioriserons les personnes désirant passer la fin de semaine au
-          manoir.
+          Nous vous aviserons en cas d'annulation. <i class="fas fa-heart"></i>
         </p>
       </div>
     </div>
