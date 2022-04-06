@@ -10,21 +10,7 @@
           Pour profiter au maximum de celui-ci et vous convaincre de passer
           votre fin de semaine de congé avec nous,
           <span>nous offrons la deuxième nuit.</span>
-          Pour les prix, fiez-vous à notre liste (semblables aux prix sur
-          <a href="https://www.stonehavenlemanoir.com/fr/" target="_blank"
-            >le site du manoir</a
-          >)
         </p>
-        <h4 id="hebergement-title">Nos prix</h4>
-        <ul class="liste-prix">
-          <li>Classique: 330$</li>
-          <li>-</li>
-          <li>Balcon: 360$</li>
-          <li>-</li>
-          <li>Supérieure: 390$</li>
-          <li>-</li>
-          <li>Suite: 430$</li>
-        </ul>
       </div>
 
       <div class="hebergement-photo">
@@ -45,7 +31,49 @@
       </div>
     </div>
 
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#infos"></i>
+    <div class="infos-hebergement">
+      <div class="infos-par">
+        <h3 id="informations">Autres options d'hébergement</h3>
+        <p class="">
+          S'il n'y a plus de place au manoir ou que celui-ci ne vous convient
+          pas, voici une liste non-exhaustive des hébergements à proximité :
+        </p>
+      </div>
+      <div class="infos-par">
+        <ul class="liste-hotels">
+          <li>
+            <a href="https://www.hotelspawatel.com/" target="_blank"
+              >Hotel Spa Watel : ~ 200$/nuit</a
+            >
+          </li>
+
+          <li>
+            <a href="https://www.super8steagathe.com/" target="_blank"
+              >Super 8 : ~ 100$/nuit</a
+            >
+          </li>
+
+          <li>
+            <a href="https://www.aubergechezgirard.com/" target="_blank"
+              >Auberge Chez Girard : ~ 130$/nuit</a
+            >
+          </li>
+
+          <li>
+            <a href="https://www.reve.ca/" target="_blank"
+              >Auberge aux nuits de rêves : ~ 250$/nuit</a
+            >
+          </li>
+
+          <li>
+            <a href="https://latourdulac.ca/" target="_blank"
+              >Auberge de la tour du lac : ~ 300$/nuit</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
   </div>
 </template>
 
