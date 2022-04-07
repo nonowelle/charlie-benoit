@@ -4,6 +4,7 @@
       <Nav />
       <Header />
       <Mariage />
+      <Horaire />
 
       <Hebergement />
 
@@ -19,7 +20,7 @@ import Header from "./Header.vue";
 
 import Nav from "./Nav.vue";
 import Mariage from "./Mariage.vue";
-// import Infos from "./Infos.vue";
+import Horaire from "./Horaire.vue";
 import Hebergement from "./Hebergement.vue";
 import Footer from "./Footer.vue";
 import Contact from "./Contact.vue";
@@ -34,6 +35,7 @@ export default {
     Hebergement,
     Contact,
     Footer,
+    Horaire,
   },
   data() {
     return {
