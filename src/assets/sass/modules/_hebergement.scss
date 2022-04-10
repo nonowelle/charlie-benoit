@@ -21,6 +21,15 @@
   }
   &-autres {
     margin-top: 0;
+    margin: 0 auto;
+
+    @media (max-width: 770px) {
+      max-width: 400px;
+    }
+
+    p {
+      margin: 0 20px;
+    }
   }
 }
 

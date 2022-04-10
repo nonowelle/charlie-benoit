@@ -34,7 +34,7 @@
     <div class="infos-hebergement">
       <div class="infos-par">
         <h3 id="informations" class="hebergement-autres">Autres options</h3>
-        <p class="">
+        <p class="hebergement-autres">
           S'il n'y a plus de place au manoir ou que celui-ci ne vous convient
           pas, voici une liste non-exhaustive des hébergements à proximité :
         </p>
