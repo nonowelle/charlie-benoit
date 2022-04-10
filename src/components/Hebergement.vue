@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="infos-hebergement">
+    <div class="infos-hebergement hebergement-autres">
       <div class="infos-par">
         <h3 id="informations" class="hebergement-autres">Autres options</h3>
         <p class="hebergement-autres">
