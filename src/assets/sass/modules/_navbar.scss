@@ -7,13 +7,15 @@
   padding: 0 60px;
   z-index: 1;
   li {
-    // list-style: circle;
     margin: 20px;
-  }
-}
 
-ul {
-  margin: 0;
+    @media (max-width: 850px) {
+      margin: 10px;
+    }
+  }
+  ul {
+    margin: 0;
+  }
 }
 
 .navbar {
@@ -21,7 +23,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 88px;
-  // padding: 1rem 1.5rem;
 }
 .hamburger {
   display: none;
@@ -83,7 +84,7 @@ ul.nav-menu {
   .nav-menu.active {
     left: 0;
     height: 50%;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .nav-item {

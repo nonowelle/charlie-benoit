@@ -1,15 +1,13 @@
 .container-menu {
   display: flex;
+  // flex-direction: column;
 
   @media (max-width: 770px) {
     flex-direction: column;
   }
-  .menu {
-    min-height: 1000px;
-  }
 
   li {
-    max-width: 350px;
+    max-width: 700px;
 
     &.choice {
       margin: 0 auto;
@@ -23,10 +21,14 @@
   #menu {
     width: 50%;
     padding: 80px 0;
+    margin-top: 135px;
 
     @media (max-width: 770px) {
       width: 100%;
+      padding: 0;
+      margin-top: 0;
     }
+
     .col-70 {
       width: 70%;
       margin: 0 auto;
@@ -53,14 +55,19 @@
   .photo-menu {
     background: url("../../assets/photos/sexy.png");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 
     width: 50%;
+    height: 700px;
+    background-position: bottom;
 
     @media (max-width: 770px) {
-      height: 500px;
       width: 100%;
-      background-position: bottom;
+      height: 450px;
     }
   }
+}
+
+.menu-list {
+  padding: 50px 20px;
 }

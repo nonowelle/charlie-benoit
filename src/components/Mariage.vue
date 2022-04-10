@@ -47,9 +47,7 @@
     <div class="details">
       <div class="details-quand">
         <h4>Quand?</h4>
-        <p>samedi le 28 mai 2022</p>
-        <div class="separator horizontal"></div>
-        <p>Plus de détails à venir</p>
+        <p>la fin de semaine du 27 - 28 - 29 mai 2022</p>
       </div>
       <div class="separator"></div>
       <div class="details-ou">

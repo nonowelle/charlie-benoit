@@ -1,8 +1,6 @@
 <template>
   <div class="infos" id="horaire">
-    <!-- <div class="col-50">
-      <img class="jpeg" src="../assets/photos/cérémoniee.png" />
-    </div> -->
+    <div class="photo-horaire"></div>
     <h3 class="horaire">Horaire</h3>
     <div class="infos-horaire" id="infos">
       <div class="col-50">
@@ -17,16 +15,16 @@
         <h4 class="horaire-title">Samedi 28 mai*</h4>
         <ul class="list">
           <li>Déjeuner inclus pour ceux qui ont une chambre au manoir</li>
-          <li>Cérémonie débutera à 15h30 dans les jardins du manoir</li>
-          <li>Cocktails 16-18h : bouchées, alcool, photos, jeux extérieurs</li>
-          <li>Souper banquet à 18h: 5 services, menu ci-bas</li>
+          <li>Cérémonie à 15h30 dans les jardins du manoir</li>
+          <li>Cocktails 16h-18h : bouchées, alcool, photos, jeux extérieurs</li>
+          <li>Souper banquet à 18h : 5 services</li>
           <li>Soirée dansante et surprises nocturnes !</li>
         </ul>
       </div>
       <div class="col-50">
         <h4 class="horaire-title">Dimanche 29 mai</h4>
         <ul class="list">
-          <li>Déjeuner inclus pour ceux qui ont une chambre au manoir</li>
+          <li>Déjeuner inclus pour les invités dormant au manoir</li>
           <li>Départ pour 12h</li>
         </ul>
       </div>
