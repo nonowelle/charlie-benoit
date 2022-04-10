@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="col-50">
-        <h4 class="horaire-title">Samedi 28 mai</h4>
+        <h4 class="horaire-title">Samedi 28 mai*</h4>
         <ul class="list">
           <li>Déjeuner inclus pour ceux qui ont une chambre au manoir</li>
           <li>Cérémonie débutera à 15h30 dans les jardins du manoir</li>
@@ -32,14 +32,8 @@
       </div>
     </div>
 
-    <div class="col-70">
-      <b>***</b> Alcool inclus: ce n’est pas à volonté, mais nous avons pensé à
-      vous et investi pour un bon party ;) . Par contre, après le budget établi,
-      les consommations seront payantes au bar du manoir
-      <b>***</b>
-    </div>
-
     <div class="separator"></div>
+
     <div class="col-70">
       <h4 class="horaire-title">Pendant le séjour, pour tout le monde</h4>
       <ul class="list">
@@ -49,11 +43,16 @@
         <li>Randonnée à partir du manoir</li>
       </ul>
     </div>
-    <i
-      class="arrow fas fa-angle-down"
-      v-smooth-scroll
-      href="#hebergement-wrapper"
-    ></i>
+
+    <div class="separator"></div>
+
+    <div class="col-70">
+      <b>*</b> Alcool inclus: ce n’est pas à volonté, mais nous avons pensé à
+      vous et investi pour un bon party ;) . Par contre, après le budget établi,
+      les consommations seront payantes au bar du manoir.
+    </div>
+
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#cadeaux"></i>
   </div>
 </template>
 

@@ -1,0 +1,66 @@
+.container-menu {
+  display: flex;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
+  .menu {
+    min-height: 1000px;
+  }
+
+  li {
+    max-width: 350px;
+
+    &.choice {
+      margin: 0 auto;
+    }
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+
+  #menu {
+    width: 50%;
+    padding: 80px 0;
+
+    @media (max-width: 770px) {
+      width: 100%;
+    }
+    .col-70 {
+      width: 70%;
+      margin: 0 auto;
+      @media (max-width: 770px) {
+        width: 80%;
+      }
+      > p {
+        margin-top: 30px;
+      }
+    }
+    .separator {
+      width: 200px;
+      height: 2px;
+      display: flex;
+      background-color: $dark-blue;
+      margin: 37px auto;
+    }
+
+    .details {
+      margin-bottom: 0;
+    }
+  }
+
+  .photo-menu {
+    background: url("../../assets/photos/sexy.png");
+    background-size: cover;
+    background-position: center;
+
+    width: 50%;
+
+    @media (max-width: 770px) {
+      height: 500px;
+      width: 100%;
+      background-position: bottom;
+    }
+  }
+}

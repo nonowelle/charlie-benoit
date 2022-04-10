@@ -11,12 +11,20 @@
             <a href="#horaire" v-smooth-scroll class="nav-link">Horaire</a>
           </li>
           <li class="nav-item">
+            <a href="#menu" v-smooth-scroll class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cadeaux" v-smooth-scroll class="nav-link">Cadeaux</a>
+          </li>
+          <li class="nav-item">
             <a href="#hebergement-wrapper" v-smooth-scroll class="nav-link"
               >Hébergement</a
             >
           </li>
           <li class="nav-item">
-            <a href="#contact" v-smooth-scroll class="nav-link">Contact</a>
+            <a href="#contact" v-smooth-scroll class="button small dark invert"
+              >Contact</a
+            >
           </li>
 
           <!-- <li class="nav-item">

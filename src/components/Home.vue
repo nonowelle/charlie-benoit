@@ -5,7 +5,8 @@
       <Header />
       <Mariage />
       <Horaire />
-
+      <Cadeaux />
+      <Menu />
       <Hebergement />
 
       <Contact />
@@ -24,6 +25,8 @@ import Horaire from "./Horaire.vue";
 import Hebergement from "./Hebergement.vue";
 import Footer from "./Footer.vue";
 import Contact from "./Contact.vue";
+import Cadeaux from "./Cadeaux.vue";
+import Menu from "./Menu.vue";
 // import RSVP from "./RSVP.vue";
 
 export default {
@@ -34,6 +37,8 @@ export default {
     Nav,
     Hebergement,
     Contact,
+    Cadeaux,
+    Menu,
     Footer,
     Horaire,
   },
