@@ -67,11 +67,7 @@
       target="_blank"
       >Voir la carte</a
     >
-    <i
-      class="arrow fas fa-angle-down"
-      v-smooth-scroll
-      href="#hebergement-wrapper"
-    ></i>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#horaire"></i>
   </div>
 </template>
 

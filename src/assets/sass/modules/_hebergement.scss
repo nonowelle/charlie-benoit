@@ -125,3 +125,16 @@
     font-weight: 400;
   }
 }
+
+.infos-hebergement {
+  display: flex;
+  flex-direction: column;
+
+  .infos-par {
+    width: 100%;
+
+    &:first-of-type {
+      width: 100%;
+    }
+  }
+}

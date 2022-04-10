@@ -73,7 +73,7 @@
         </ul>
       </div>
     </div>
-    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#rsvp"></i>
+    <i class="arrow fas fa-angle-down" v-smooth-scroll href="#contact"></i>
   </div>
 </template>
 

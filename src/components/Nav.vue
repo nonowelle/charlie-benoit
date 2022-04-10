@@ -8,6 +8,9 @@
             <a href="#mariage" v-smooth-scroll class="nav-link">Le mariage</a>
           </li>
           <li class="nav-item">
+            <a href="#horaire" v-smooth-scroll class="nav-link">Horaire</a>
+          </li>
+          <li class="nav-item">
             <a href="#hebergement-wrapper" v-smooth-scroll class="nav-link"
               >Hébergement</a
             >
@@ -16,11 +19,11 @@
             <a href="#contact" v-smooth-scroll class="nav-link">Contact</a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#rsvp" v-smooth-scroll class="button small dark invert"
               >RSVP</a
             >
-          </li>
+          </li> -->
         </ul>
         <div
           class="hamburger"
