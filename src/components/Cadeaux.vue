@@ -61,7 +61,11 @@
             ce qu’il nous faut et peu de place pour des biens matériels en plus!
             Mais si vous désirez nous faire un cadeau, nous vous invitons plutôt
             à contribuer à notre voyage de noce, car après 2 ans de sédentarité,
-            on compte se gâter à Maderre sous peu ;)
+            on compte se gâter à Maderre sous peu. Et comme on est arrivé en
+            2022, vous pouvez simplement faire un virement interac à l'adresse
+            courriel
+            <b>charlieduret@gmail.com </b>
+            ;).
           </p>
 
           <div class="separator"></div>
@@ -85,6 +89,6 @@
 
 <script>
 export default {
-  name: "Mariage",
+  name: 'Mariage',
 };
 </script>
