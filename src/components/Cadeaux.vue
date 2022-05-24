@@ -64,7 +64,7 @@
             on compte se gâter à Maderre sous peu. Et comme on est arrivé en
             2022, vous pouvez simplement faire un virement interac à l'adresse
             courriel
-            <b>charlieduret@gmail.com </b>
+            <b>charlieduret@gmail.com</b>
             ;).
           </p>
 
