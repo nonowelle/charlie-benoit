@@ -28,13 +28,18 @@
 
   li {
     max-width: none;
+
+    @media (max-width: 770px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .attending,
   .not-attending {
     background-color: transparent;
     border: 1px solid $dark-blue;
-    max-width: 700px;
+    max-width: 900px;
     border-radius: 4px;
     margin: 30px auto;
     padding: 30px;

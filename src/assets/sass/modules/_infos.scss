@@ -7,7 +7,6 @@
 
   &-hebergement {
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     // min-height: 80vh;
@@ -16,16 +15,28 @@
   &-par {
     max-width: 650px;
     margin: 0 60px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 15px;
 
     @media (max-width: 770px) {
       margin: 0;
+    }
+
+    &:first-of-type {
+      width: 40%;
+    }
+
+    p {
+      margin-top: 15px;
     }
   }
 
   .liste-hotels {
     max-width: 650px;
     margin: 30px 60px 30px 60px;
+    @media (max-width: 770px) {
+      margin: 30px;
+    }
 
     li {
       margin: 10px;
@@ -39,6 +50,10 @@
 
   h3 {
     margin: 40px 0;
+
+    &.horaire {
+      margin: 40px 0;
+    }
   }
 
   a {

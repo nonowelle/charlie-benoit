@@ -4,15 +4,16 @@
   background-position-y: 20%;
   background-size: cover;
   color: $background-light;
-  min-height: 100vh;
+  min-height: 1000px;
 
   @media (max-width: 770px) {
     background-position-x: 40%;
+    min-height: 800px;
   }
 
   .wrapper {
     max-width: 600px;
-    margin: 350px auto 0 auto;
+    margin: 300px auto 0 auto;
 
     @media (max-width: 600px) {
       margin: 50% auto 0 auto;

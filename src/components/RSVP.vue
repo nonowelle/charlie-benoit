@@ -220,7 +220,7 @@ export default {
       this.validateForm();
 
       if (!this.formIsValid) {
-        alert("NOT VALID");
+        console.log("Veuillez remplir tous les champs correctement.");
         return;
       }
       const formData = {
@@ -231,25 +231,39 @@ export default {
         answer: this.picked.val,
       };
 
+      const formBody = Object.keys(formData)
+        .map(
+          (key) =>
+            encodeURIComponent(key) + "=" + encodeURIComponent(formData[key])
+        )
+        .join("&");
+
+      const params = new URLSearchParams();
+      params.append("firstName", formData.firstName);
+      console.log();
       const options = {
         method: "POST",
+        body: formBody,
         headers: {
-          "Content-Type": "application/json",
+          // "Access-Control-Request-Method": "POST",
+          // "Access-Control-Request-Headers": " Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         },
-        body: JSON.stringify(formData),
       };
+      console.log(JSON.stringify(formData));
 
-      fetch("/confirmations", options)
-        .then((response) => {
-          return response.json();
+      fetch("https://api-charlie.herokuapp.com/api/confirmations", options)
+        .then(async (response) => {
+          return response;
         })
         .then((data) => {
-          console.log(data.answer);
+          console.log(data);
           if (data.answer === "Yes") {
             this.isGoing = true;
             console.log("ISGOING");
           }
-        });
+        })
+        .catch((error) => console.log("error", error));
 
       this.formSubmitted = true;
     },

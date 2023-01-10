@@ -74,15 +74,23 @@ export default {
     loadConfirmations() {
       this.isLoading = true;
 
+<<<<<<< HEAD
       fetch('/confirmations')
         .then(async (response) => await response.json())
+=======
+      fetch("https://api-charlie.herokuapp.com/api/confirmations")
+        .then(async (response) => {
+          const resultats = await response.json();
+          return resultats;
+        })
+>>>>>>> e1ca641b39382f0982b453f082e9be074aacb7e9
         .then((data) => {
-          for (let person of data) {
-            const email = person.email;
-            const firstName = person.firstName;
-            const lastName = person.lastName;
-            const answer = person.answer;
-            const phone = person.phone;
+          for (let i = 0; i < data.length; i++) {
+            const email = data[i].email;
+            const firstName = data[i].firstName;
+            const lastName = data[i].lastName;
+            const answer = data[i].answer;
+            const phone = data[i].phone;
 
             const invite = {};
             invite.email = email;
@@ -93,6 +101,7 @@ export default {
 
             this.result.push(invite);
           }
+
           this.filterConfirmationsByChoice();
         })
         .catch(function(error) {
