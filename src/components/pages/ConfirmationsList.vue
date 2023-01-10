@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: "ConfirmationsList",
+  name: 'ConfirmationsList',
 
   data() {
     return {
@@ -64,21 +64,18 @@ export default {
   methods: {
     filterConfirmationsByChoice() {
       const invitesAttending = this.result.filter((person) => {
-        return person.answer == "Yes";
+        return person.answer == 'Yes';
       });
       this.attendingInvites = invitesAttending;
       this.notAttending = this.result.filter((person) => {
-        return person.answer == "No";
+        return person.answer == 'No';
       });
     },
     loadConfirmations() {
       this.isLoading = true;
 
-      fetch("/confirmations")
-        .then(async (response) => {
-          const resultats = await response.json();
-          return resultats;
-        })
+      fetch('/confirmations')
+        .then(async (response) => await response.json())
         .then((data) => {
           for (let person of data) {
             const email = person.email;
